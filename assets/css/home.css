@@ -1,0 +1,30 @@
+
+.image{
+    position:relative;
+    top:0px;
+    left:0px;
+
+}
+.title{
+    position:absolute;
+    top:65px;
+    left:56px;
+    color:#eeeeee;
+}
+.btnlogin {
+    position: absolute;
+    top: 65px;
+    right: 156px;
+}
+.btnlogin a{
+    color:#e2e6ea;
+    background: #000;
+
+}
+.title2{
+    position:absolute;
+    top: 65px;
+    left:50%;
+    transform: translateX(-50%);
+}
+

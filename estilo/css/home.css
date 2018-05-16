@@ -1,0 +1,14 @@
+
+@charset "utf-8";
+
+body {
+            background: url('../../img/wallpaper/back_home.jpg')  no-repeat ;
+            background-origin: content-box;
+        }
+
+body h1{color: #FFFFFF; }
+body h3{color: #FFFFFF;}
+a{text-align: center;}
+
+
+
