@@ -1,0 +1,43 @@
+
+body,td,th 
+{
+	font-size: 24px;
+	color: #03C;
+	margin-left: 0px;
+}
+#btnCad
+{
+	font-size: 20px;
+	color: #03C;
+	text-align: center;
+
+}
+	
+#CadCategoria table tr th p {
+	text-align: center;
+	font-size: 30px;
+}
+#form1 p {
+	text-align: center;
+	font-size: 36px;
+	\\color: #03C;
+}
+#title {
+	font-size: 34px;
+}
+.title {
+	font-size: 34px;
+}
+.letras {
+	color: #666;
+	text-align: center;
+}
+#form1 table tr th div table tr td label div {
+	text-align: center;
+}
+#form1 table tr td div table tr td div {
+	text-align: center;
+}
+#form1 table tr td div table {
+	text-align: center;
+}
