@@ -10,6 +10,5 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
 <link type="text/css" href="<?php echo base_url(); ?>assets/bootstrap-4.0.0-dist/css/bootstrap.min.css"rel="stylesheet">
 <link type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
 <link type="text/css" href="<?php echo base_url(); ?>assets/css/Login.css" rel= "stylesheet">
 </head>

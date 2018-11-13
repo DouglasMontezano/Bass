@@ -1,11 +1,11 @@
 
     <body>
         <nav class="section section-primary ">
-            <div class="container">
+          <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="col-md-4">
-                            <h1 contenteditable="true">Clientes</h1>
+                            <h2 contenteditable="true">Clientes</h2>
                         </div>
                     </div>                 
                     <div class="col-md-8">
@@ -29,5 +29,4 @@
                 </div>
             </div>
         </nav>
-
     </body>
