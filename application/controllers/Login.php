@@ -23,16 +23,16 @@ class Login extends CI_Controller
 	}
 	// Função que loga o funcionario
 	public function Logar()
-	{
+
+	{		
 		//post vindo do form de login
 		$data['email'] = $this->input->post('email');
 		$data['senha'] = $this->input->post('senha');
-		$this->load->model('model_Login');
-		$objmodel = new model_Login();
+		$this->load->model('Model_Login');
+		$objmodel = new Model_Login();
 		//buscando usuario e senha no banco pelo metodo GET e atribuindo seu retorno ao vetor usuario
 		$dataretorno['usuario'] = $objmodel->GET($data);
-		// echo  $dataretorno['usuario'];
-
+		// echo $dataretorno['usuario'];
 		// se no vetor usuario tiver algum conteudo, incluo o conteudo dele na sessão.
 		if (count($dataretorno['usuario']) == 1) {
 			//recebendo nome e id do funcionario para dentro do vetor dados juntamente setando o indice logado com o valor true
