@@ -9,7 +9,6 @@ class Model_Login extends CI_Model
         $this->db->where('senha_funcionario', $data['senha']);
         return $this->db->get('funcionarios')->result();
     }
-
 }
 
 
