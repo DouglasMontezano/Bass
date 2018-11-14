@@ -10,9 +10,6 @@ class Model_Login extends CI_Model
         return $this->db->get('funcionarios')->result();
     }
 
-
-
-
 }
 
 
