@@ -6,7 +6,7 @@
 		</header>
 
 		<section class='login'>
-			<form class="" role="form" action="<?= base_url() ?>Logar" method="post">				 					
+			<form class="" role="form" action="<?= base_url() ?>Login/Logar" method="post">				 					
 					<div class="col-md-7">
 						<h2>Login</h2>
 							<div class="input-group ">
