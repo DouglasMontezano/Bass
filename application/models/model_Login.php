@@ -10,6 +10,3 @@ class Model_Login extends CI_Model
         return $this->db->get('funcionarios')->result();
     }
 }
-
-//teste para branch_linux.
-
