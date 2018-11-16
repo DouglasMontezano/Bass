@@ -7,7 +7,6 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery_3.2.js"></script>   
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery.js"></script>
-
     <link type="text/css" href="<?php echo base_url(); ?>assets/css/Reset.css"rel="stylesheet">
     <link type="text/css" href="<?php echo base_url(); ?>assets/css/nav-pattern.css"rel="stylesheet">
     <link type="text/css" href="<?php echo base_url(); ?>assets/bootstrap-4.0.0-dist/css/bootstrap.min.css"rel="stylesheet">
