@@ -36,8 +36,7 @@ class Clientes extends CI_Controller
     // Função de cadastro de clientes
     public function CadastraClientes()
     {
-        '~'
-            $this->Verifica_Sessao();
+        $this->Verifica_Sessao();
         $this->form_validation->set_rules('nome_cliente', 'Nome', 'required');
         $this->form_validation->set_rules('fone_cliente', 'Fone', 'required');
         $this->form_validation->set_rules('fone2_cliente', 'Fone 2', '');
