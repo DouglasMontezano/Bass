@@ -10,36 +10,30 @@ class Clientes extends CI_Controller
             redirect('login');
         }
     }
-
     public function PainelClientes()
     {
         $this->Verifica_Sessao();
         $this->ListClientes();
     }
-
     // Função que lista todos clientes
     public function ListClientes()
     {
         $this->Verifica_Sessao();
-        // $this->load->view('vw_Cabecalho');
-        // $this->load->view('vw_Clientes');
         $this->template->load("layouts/lay_pattern", "vw_Clientes");
         $this->load->model('model_Clientes');
         $objModel = new Model_Clientes();
         $retorno = $objModel->GETALL();
         $this->load->view('vw_Lista_Clientes', array('resultado' => $retorno));
     }
-// Função que carrega o form de cadastro de clientes
-
+    // Função que carrega o form de cadastro de clientes
     public function FormCadClientes()
     {
         $this->Verifica_Sessao();
-
         $this->load->view('vw_Cabecalho');
         $this->load->view('vw_Clientes');
         $this->load->view('vw_Cad_Clientes');
     }
-// Função de cadastro de clientes
+    // Função de cadastro de clientes
     public function CadastraClientes()
     {
         $this->Verifica_Sessao();
