@@ -4,7 +4,6 @@ class Login extends CI_Controller
 {
 	public function Index()
 	{
-		$title = 'Login';
 		$this->template->load("layouts/lay_login/lay_login.php", "vw_Login");
 	}
 	//verifica sessao
@@ -23,16 +22,15 @@ class Login extends CI_Controller
 	}
 	// Função que loga o funcionario
 	public function Logar()
-
-	{		
-		//post vindo do form de login
+	{
+		// post vindo do form de login
 		$data['email'] = $this->input->post('email');
 		$data['senha'] = $this->input->post('senha');
+
 		$this->load->model('Model_Login');
 		$objmodel = new Model_Login();
 		//buscando usuario e senha no banco pelo metodo GET e atribuindo seu retorno ao vetor usuario
 		$dataretorno['usuario'] = $objmodel->GET($data);
-		// echo $dataretorno['usuario'];
 		// se no vetor usuario tiver algum conteudo, incluo o conteudo dele na sessão.
 		if (count($dataretorno['usuario']) == 1) {
 			//recebendo nome e id do funcionario para dentro do vetor dados juntamente setando o indice logado com o valor true
@@ -48,6 +46,8 @@ class Login extends CI_Controller
 		else {
 			$this->session->set_flashdata('errologin', '<font color="white">Erro de login, Email ou Senha incorretos </font>');
 			$this->Index();
+			var_dump($data);
+			var_dump($dataretorno['usuario']);
 		}
 	}
 	//funçao que faz logout do usuário passando uma mensagem de sucesso

@@ -1,10 +1,8 @@
 
-
 		<header>
 			<h1>Bass Auto Center</h1>
 			<p>Projetos Automotivos</p>
 		</header>
-
 		<section class='login'>
 			<form class="" role="form" action="<?= base_url() ?>Login/Logar" method="post">				 					
 					<div class="col-md-7">
