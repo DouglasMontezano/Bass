@@ -44,7 +44,7 @@ $config['base_url'] ='http://localhost/Bass';
 |
 */
 $config['index_page'] = 'index.php';
-
+//$config['index_page'] = '';
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
