@@ -1,0 +1,57 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/wallpaper/falante.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	/* background-attachment: fixed; */
+}
+
+header {
+	position: absolute;
+	width: 30%;
+	color: #00FFFF;
+	margin-top: 5%;
+	margin-left: 5%;
+	float: left;
+}
+
+.login {
+	text-align: center;
+	position: relative;
+	width: 30%;
+	margin-right: 0px;
+	margin-top: 5%;
+	float: right;
+}
+
+.login input {
+	border: none;
+	border-bottom: 2px solid #00FFFF;
+	background-color: transparent;
+	-moz-user-focus: normal;
+}
+
+.login h2 {
+	color: #00FFFF;
+}
+
+.login i {
+	color: #00FFFF;
+}
+
+.login button {
+	width: 65%;
+	left: 20%;
+	background-color: transparent !important;
+	border-color: #00FFFF !important;
+	color: #00FFFF !important;
+}
+
+.alert h4 {
+	font-size: 14px !important;
+	text-align: center !important;
+}

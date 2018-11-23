@@ -1,0 +1,24 @@
+/*css criado para montar a nav usada como padrão em várias telas*/
+
+.section {
+ display: block;
+ position: relative;
+ padding: 35px 0;
+}
+
+.section-primary {
+ background-color: #337cbb !important;
+ color: #ffffff !important;
+}
+
+.text-inverse {
+ color: #ffffff;
+}
+
+.cover h1.text-inverse {
+ color: #ffffff !important;
+}
+
+.jumbotron h1.text-inverse {
+ color: #ffffff !important;
+}
