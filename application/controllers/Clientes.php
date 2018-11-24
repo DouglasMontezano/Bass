@@ -24,7 +24,7 @@ class Clientes extends CI_Controller
         // $this->load->view('vw_Cabecalho');
         // $this->load->view('vw_Clientes');
         $this->template->load("layouts/lay_pattern", "vw_Clientes");
-        $this->load->model('model_Clientes');
+        $this->load->model('Model_Clientes');
         $objModel = new Model_Clientes();
         $retorno = $objModel->GETALL();
         $this->load->view('vw_Lista_Clientes', array('resultado' => $retorno));
@@ -34,7 +34,6 @@ class Clientes extends CI_Controller
     public function FormCadClientes()
     {
         $this->Verifica_Sessao();
-
         $this->load->view('vw_Cabecalho');
         $this->load->view('vw_Clientes');
         $this->load->view('vw_Cad_Clientes');

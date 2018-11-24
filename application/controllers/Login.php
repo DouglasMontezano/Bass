@@ -32,7 +32,7 @@ class Login extends CI_Controller
 		$objmodel = new Model_Login();
 		//buscando usuario e senha no banco pelo metodo GET e atribuindo seu retorno ao vetor usuario
 		$dataretorno['usuario'] = $objmodel->GET($data);
-		// echo $dataretorno['usuario'];
+		//echo $dataretorno['usuario'];
 		// se no vetor usuario tiver algum conteudo, incluo o conteudo dele na sessão.
 		if (count($dataretorno['usuario']) == 1) {
 			//recebendo nome e id do funcionario para dentro do vetor dados juntamente setando o indice logado com o valor true

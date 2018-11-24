@@ -6,7 +6,7 @@ class Administrativo extends CI_Controller
     public function Verifica_Sessao()
     {
         if ($this->session->userdata('logado') == false) {
-            redirect('login');
+            redirect('login');            
         }
     }
     public function PainelAdministrativo()
