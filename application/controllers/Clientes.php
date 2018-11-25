@@ -10,27 +10,42 @@ class Clientes extends CI_Controller
             redirect('login');
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     public function PainelClientes()
     {
         $this->Verifica_Sessao();
         $this->ListClientes();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     // Função que lista todos clientes
     public function ListClientes()
     {
         $this->Verifica_Sessao();
+<<<<<<< HEAD
         // $this->load->view('vw_Cabecalho');
         // $this->load->view('vw_Clientes');
         $this->template->load("layouts/lay_pattern", "vw_Clientes");
         $this->load->model('Model_Clientes');
+=======
+        $this->template->load("layouts/lay_pattern", "vw_Clientes");
+        $this->load->model('model_Clientes');
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
         $objModel = new Model_Clientes();
         $retorno = $objModel->GETALL();
         $this->load->view('vw_Lista_Clientes', array('resultado' => $retorno));
     }
+<<<<<<< HEAD
 // Função que carrega o form de cadastro de clientes
 
+=======
+    // Função que carrega o form de cadastro de clientes
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     public function FormCadClientes()
     {
         $this->Verifica_Sessao();
@@ -38,7 +53,11 @@ class Clientes extends CI_Controller
         $this->load->view('vw_Clientes');
         $this->load->view('vw_Cad_Clientes');
     }
+<<<<<<< HEAD
 // Função de cadastro de clientes
+=======
+    // Função de cadastro de clientes
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     public function CadastraClientes()
     {
         $this->Verifica_Sessao();
@@ -94,7 +113,10 @@ class Clientes extends CI_Controller
     public function SalvarEditClientes()
     {
         $this->Verifica_Sessao();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
         $id = $this->input->post('id_cliente');
         $vet['nome_cliente'] = $this->input->post('nome_cliente');
         $vet['fone_cliente'] = $this->input->post('fone_cliente');

@@ -1,10 +1,16 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 		<header>
 			<h1>Bass Auto Center</h1>
 			<p>Projetos Automotivos</p>
 		</header>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 		<section class='login'>
 			<form class="" role="form" action="<?= base_url() ?>Login/Logar" method="post">				 					
 					<div class="col-md-7">

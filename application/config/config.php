@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
 defined('BASEPATH') OR exit('No direct script access allowed');
+=======
+defined('BASEPATH') or exit('No direct script access allowed');
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | If you need to allow multiple domains, remember that this file is still
 | a PHP script and you can easily do that on your own.
 |
+<<<<<<< HEAD
 */
 
 
@@ -32,6 +37,13 @@ $config['base_url'] ='http://localhost/Bass';
 
 
 
+=======
+ */
+// $base_url = "http://" . $_SERVER['HTTP_HOST'];
+// $base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+// $config['base_url'] = $base_url;
+$config['base_url'] = 'http://localhost/Bass';
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 /*
 
 |--------------------------------------------------------------------------
@@ -42,9 +54,15 @@ $config['base_url'] ='http://localhost/Bass';
 | something else. If you are using mod_rewrite to remove the page set this
 | variable so that it is blank.
 |
+<<<<<<< HEAD
 */
 $config['index_page'] = 'index.php';
 //$config['index_page'] = '';
+=======
+ */
+$config['index_page'] = 'index.php';
+
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
@@ -59,8 +77,13 @@ $config['index_page'] = 'index.php';
 | 'PATH_INFO'      Uses $_SERVER['PATH_INFO']
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
+<<<<<<< HEAD
 */
 $config['uri_protocol']	= 'REQUEST_URI';
+=======
+ */
+$config['uri_protocol'] = 'REQUEST_URI';
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +94,11 @@ $config['uri_protocol']	= 'REQUEST_URI';
 | For more information please see the user guide:
 |
 | https://codeigniter.com/user_guide/general/urls.html
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['url_suffix'] = '';
 
 /*
@@ -83,8 +110,13 @@ $config['url_suffix'] = '';
 | there is an available translation if you intend to use something other
 | than english.
 |
+<<<<<<< HEAD
 */
 $config['language']	= 'pt-br';
+=======
+ */
+$config['language'] = 'pt-br';
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -96,7 +128,11 @@ $config['language']	= 'pt-br';
 |
 | See http://php.net/htmlspecialchars for a list of supported charsets.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['charset'] = 'UTF-8';
 
 /*
@@ -107,8 +143,13 @@ $config['charset'] = 'UTF-8';
 | If you would like to use the 'hooks' feature you must enable it by
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
+<<<<<<< HEAD
 */
 $config['enable_hooks'] = FALSE;
+=======
+ */
+$config['enable_hooks'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -121,7 +162,11 @@ $config['enable_hooks'] = FALSE;
 | https://codeigniter.com/user_guide/general/core_classes.html
 | https://codeigniter.com/user_guide/general/creating_libraries.html
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['subclass_prefix'] = 'MY_';
 
 /*
@@ -143,8 +188,13 @@ $config['subclass_prefix'] = 'MY_';
 |
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
+<<<<<<< HEAD
 */
 $config['composer_autoload'] = FALSE;
+=======
+ */
+$config['composer_autoload'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -165,7 +215,11 @@ $config['composer_autoload'] = FALSE;
 |
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 
 /*
@@ -192,9 +246,15 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 | this feature is enabled, since CodeIgniter is designed primarily to
 | use segment based URLs.
 |
+<<<<<<< HEAD
 */
 $config['allow_get_array'] = TRUE;
 $config['enable_query_strings'] = FALSE;
+=======
+ */
+$config['allow_get_array'] = true;
+$config['enable_query_strings'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
@@ -220,7 +280,11 @@ $config['directory_trigger'] = 'd';
 | For a live site you'll usually only enable Errors (1) to be logged otherwise
 | your log files will fill up very fast.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['log_threshold'] = 0;
 
 /*
@@ -231,7 +295,11 @@ $config['log_threshold'] = 0;
 | Leave this BLANK unless you would like to set something other than the default
 | application/logs/ directory. Use a full server path with trailing slash.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['log_path'] = '';
 
 /*
@@ -245,7 +313,11 @@ $config['log_path'] = '';
 |
 | Note: Leaving it blank will default to 'php'.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['log_file_extension'] = '';
 
 /*
@@ -257,7 +329,11 @@ $config['log_file_extension'] = '';
 |
 | IMPORTANT: This MUST be an integer (no quotes) and you MUST use octal
 |            integer notation (i.e. 0700, 0644, etc.)
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['log_file_permissions'] = 0644;
 
 /*
@@ -268,7 +344,11 @@ $config['log_file_permissions'] = 0644;
 | Each item that is logged has an associated date. You can use PHP date
 | codes to set your own date formatting
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['log_date_format'] = 'Y-m-d H:i:s';
 
 /*
@@ -279,7 +359,11 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 | Leave this BLANK unless you would like to set something other than the default
 | application/views/errors/ directory.  Use a full server path with trailing slash.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['error_views_path'] = '';
 
 /*
@@ -290,7 +374,11 @@ $config['error_views_path'] = '';
 | Leave this BLANK unless you would like to set something other than the default
 | application/cache/ directory.  Use a full server path with trailing slash.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['cache_path'] = '';
 
 /*
@@ -308,8 +396,13 @@ $config['cache_path'] = '';
 |	array('q') = Enabled, but only take into account the specified list
 |	             of query parameters.
 |
+<<<<<<< HEAD
 */
 $config['cache_query_string'] = FALSE;
+=======
+ */
+$config['cache_query_string'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -321,7 +414,11 @@ $config['cache_query_string'] = FALSE;
 |
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['encryption_key'] = 'hdhd7252gs6@v3vb5ATy*';
 
 /*
@@ -374,6 +471,7 @@ $config['encryption_key'] = 'hdhd7252gs6@v3vb5ATy*';
 | Other session cookie settings are shared with the rest of the application,
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
+<<<<<<< HEAD
 */
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
@@ -382,6 +480,16 @@ $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
+=======
+ */
+$config['sess_driver'] = 'files';
+$config['sess_cookie_name'] = 'ci_session';
+$config['sess_expiration'] = 7200;
+$config['sess_save_path'] = null;
+$config['sess_match_ip'] = false;
+$config['sess_time_to_update'] = 300;
+$config['sess_regenerate_destroy'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -397,12 +505,21 @@ $config['sess_regenerate_destroy'] = FALSE;
 | Note: These settings (with the exception of 'cookie_prefix' and
 |       'cookie_httponly') will also affect sessions.
 |
+<<<<<<< HEAD
 */
 $config['cookie_prefix']	= '';
 $config['cookie_domain']	= '';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;
+=======
+ */
+$config['cookie_prefix'] = '';
+$config['cookie_domain'] = '';
+$config['cookie_path'] = '/';
+$config['cookie_secure'] = false;
+$config['cookie_httponly'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -415,8 +532,13 @@ $config['cookie_httponly'] 	= FALSE;
 | This is particularly useful for portability between UNIX-based OSes,
 | (usually \n) and Windows (\r\n).
 |
+<<<<<<< HEAD
 */
 $config['standardize_newlines'] = FALSE;
+=======
+ */
+$config['standardize_newlines'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -429,8 +551,13 @@ $config['standardize_newlines'] = FALSE;
 | WARNING: This feature is DEPRECATED and currently available only
 |          for backwards compatibility purposes!
 |
+<<<<<<< HEAD
 */
 $config['global_xss_filtering'] = FALSE;
+=======
+ */
+$config['global_xss_filtering'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -445,12 +572,21 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_expire' = The number in seconds the token should expire.
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
+<<<<<<< HEAD
 */
 $config['csrf_protection'] = FALSE;
 $config['csrf_token_name'] = 'csrf_test_name';
 $config['csrf_cookie_name'] = 'csrf_cookie_name';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
+=======
+ */
+$config['csrf_protection'] = false;
+$config['csrf_token_name'] = 'csrf_test_name';
+$config['csrf_cookie_name'] = 'csrf_cookie_name';
+$config['csrf_expire'] = 7200;
+$config['csrf_regenerate'] = true;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['csrf_exclude_uris'] = array();
 
 /*
@@ -472,8 +608,13 @@ $config['csrf_exclude_uris'] = array();
 | compression to work, nothing can be sent before the output buffer is called
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
+<<<<<<< HEAD
 */
 $config['compress_output'] = FALSE;
+=======
+ */
+$config['compress_output'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -485,7 +626,11 @@ $config['compress_output'] = FALSE;
 | reference, or convert it to the configured one timezone. See the 'date
 | helper' page of the user guide for information regarding date handling.
 |
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['time_reference'] = 'local';
 
 /*
@@ -499,8 +644,13 @@ $config['time_reference'] = 'local';
 |
 | Note: You need to have eval() enabled for this to work.
 |
+<<<<<<< HEAD
 */
 $config['rewrite_short_tags'] = FALSE;
+=======
+ */
+$config['rewrite_short_tags'] = false;
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 
 /*
 |--------------------------------------------------------------------------
@@ -517,5 +667,9 @@ $config['rewrite_short_tags'] = FALSE;
 |
 | Comma-separated:	'10.0.1.200,192.168.5.0/24'
 | Array:		array('10.0.1.200', '192.168.5.0/24')
+<<<<<<< HEAD
 */
+=======
+ */
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
 $config['proxy_ips'] = '';

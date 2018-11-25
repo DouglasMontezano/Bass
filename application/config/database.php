@@ -78,7 +78,11 @@ $db['prod'] = array(
     'dsn' => '',
     'hostname' => 'localhost',
     'username' => 'root',
+<<<<<<< HEAD
     'password' => 'Tevatron@12345',
+=======
+    'password' => '',
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     'database' => 'bass',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
@@ -99,7 +103,11 @@ $db['dev'] = array(
     'dsn' => '',
     'hostname' => 'localhost',
     'username' => 'root',
+<<<<<<< HEAD
     'password' => 'Tevatron@12345',
+=======
+    'password' => '',
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     'database' => 'bass',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',

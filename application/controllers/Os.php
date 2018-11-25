@@ -20,7 +20,10 @@ class Os extends CI_Controller
         $this->Verifica_Sessao();
         // $this->load->view('vw_Cabecalho');
         $this->template->load("layouts/lay_pattern", "vw_Os");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $retorno = $objModel->GETALL();
@@ -30,10 +33,15 @@ class Os extends CI_Controller
     public function FormCadOs()
     {
         $this->Verifica_Sessao();
+<<<<<<< HEAD
 
         $this->template->load("layouts/lay_pattern", "vw_Os");
         // $this->load->view('vw_Os');
 
+=======
+        $this->template->load("layouts/lay_pattern", "vw_Os");
+        // $this->load->view('vw_Os');
+>>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $retorno = $objModel->GETCLI();
