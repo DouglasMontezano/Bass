@@ -19,19 +19,15 @@ class Clientes extends CI_Controller
     public function ListClientes()
     {
         $this->Verifica_Sessao();
-
         // $this->load->view('vw_Cabecalho');
         // $this->load->view('vw_Clientes');
         $this->template->load("layouts/lay_pattern", "vw_Clientes");
         $this->load->model('Model_Clientes');
-
         $objModel = new Model_Clientes();
         $retorno = $objModel->GETALL();
         $this->load->view('vw_Lista_Clientes', array('resultado' => $retorno));
     }
 // Função que carrega o form de cadastro de clientes
-
-
     public function FormCadClientes()
     {
         $this->Verifica_Sessao();
@@ -72,11 +68,10 @@ class Clientes extends CI_Controller
             $vet['cidade_cliente'] = $this->input->post('cidade_cliente');
             $vet['estado_cliente'] = $this->input->post('estado_cliente');
             $vet['desativado'] = $this->input->post('desativado');
-
             $this->load->model('model_Clientes');
             $objModel = new Model_Clientes();
             $objModel->CREATE($vet);
-             //$this->load->view('vw_Msg_Sucess');
+            //$this->load->view('vw_Msg_Sucess');
             redirect('Clientes/ListClientes');
         }
     }
@@ -84,14 +79,12 @@ class Clientes extends CI_Controller
     public function EditClientes($id = null)
     {
         $this->Verifica_Sessao();
-
         $this->load->model('model_Clientes');
         $objModel = new Model_Clientes();
         $data['clientes'] = $objModel->GETBYID($id);
         $this->load->view('vw_Clientes');
         $this->load->view('vw_Edita_Clientes', $data);
     }
-
 //Função que carrega variáveis com o post vindo do form e depois atualiza no banco
     public function SalvarEditClientes()
     {
@@ -109,7 +102,6 @@ class Clientes extends CI_Controller
         $vet['cidade_cliente'] = $this->input->post('cidade_cliente');
         $vet['estado_cliente'] = $this->input->post('estado_cliente');
         $vet['desativado'] = $this->input->post('desativado');
-
         $this->load->model('model_Clientes');
         $objModel = new Model_Clientes();
         $objModel->UPDATE($id, $vet);
@@ -119,7 +111,6 @@ class Clientes extends CI_Controller
     public function GetForCli()
     {
         $this->Verifica_Sessao();
-
         $busca = $this->input->post('busca');
         $this->load->view('vw_Clientes');
         $this->load->model('model_Clientes');
@@ -134,7 +125,6 @@ class Clientes extends CI_Controller
         $this->load->model('model_Clientes');
         $objModel = new Model_Clientes();
         $retorno = $objModel->SITUACAO_OS($id);
-
         if (empty($retorno)) {
             $objModel->DELETE($id);
             redirect('Clientes/ListClientes');
@@ -147,28 +137,3 @@ class Clientes extends CI_Controller
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
