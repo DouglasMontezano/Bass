@@ -1,7 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -30,7 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $base_url .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
 // $config['base_url'] = $base_url;
 $config['base_url'] ='http://localhost/Bass';
-
 /*
 
 |--------------------------------------------------------------------------
@@ -62,7 +59,6 @@ $config['index_page'] = 'index.php';
 */
 $config['uri_protocol']	= 'REQUEST_URI';
 
-
 /*
 |--------------------------------------------------------------------------
 | URL suffix
@@ -87,9 +83,6 @@ $config['url_suffix'] = '';
 
 */
 $config['language']	= 'pt-br';
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -117,10 +110,6 @@ $config['charset'] = 'UTF-8';
 <<<<<<< HEAD
 */
 $config['enable_hooks'] = FALSE;
-
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Class Extension Prefix
@@ -134,11 +123,7 @@ $config['enable_hooks'] = FALSE;
 |
 
 */
-
-
-
 $config['subclass_prefix'] = 'MY_';
-
 /*
 |--------------------------------------------------------------------------
 | Composer auto-loading
@@ -211,7 +196,7 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 | this feature is enabled, since CodeIgniter is designed primarily to
 | use segment based URLs.
 |
-<<<<<<< HEAD
+
 */
 $config['allow_get_array'] = TRUE;
 $config['enable_query_strings'] = FALSE;
@@ -270,7 +255,7 @@ $config['log_path'] = '';
 |
 | Note: Leaving it blank will default to 'php'.
 |
-<<<<<<< HEAD
+
 */
 $config['log_file_extension'] = '';
 
@@ -283,7 +268,7 @@ $config['log_file_extension'] = '';
 |
 | IMPORTANT: This MUST be an integer (no quotes) and you MUST use octal
 |            integer notation (i.e. 0700, 0644, etc.)
-<<<<<<< HEAD
+
 */
 $config['log_file_permissions'] = 0644;
 
@@ -295,7 +280,7 @@ $config['log_file_permissions'] = 0644;
 | Each item that is logged has an associated date. You can use PHP date
 | codes to set your own date formatting
 |
-<<<<<<< HEAD
+
 */
 $config['log_date_format'] = 'Y-m-d H:i:s';
 
@@ -307,7 +292,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 | Leave this BLANK unless you would like to set something other than the default
 | application/views/errors/ directory.  Use a full server path with trailing slash.
 |
-<<<<<<< HEAD
+
 */
 $config['error_views_path'] = '';
 
@@ -319,7 +304,7 @@ $config['error_views_path'] = '';
 | Leave this BLANK unless you would like to set something other than the default
 | application/cache/ directory.  Use a full server path with trailing slash.
 |
-<<<<<<< HEAD
+
 */
 $config['cache_path'] = '';
 
@@ -351,10 +336,8 @@ $config['cache_query_string'] = FALSE;
 |
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
-<<<<<<< HEAD
 */
 $config['encryption_key'] = 'hdhd7252gs6@v3vb5ATy*';
-
 /*
 |--------------------------------------------------------------------------
 | Session Variables

@@ -79,7 +79,6 @@ $db['prod'] = array(
     'hostname' => 'localhost',
     'username' => 'root',
     'password' => 'Tevatron@12345',
-
     'database' => 'bass',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
@@ -101,7 +100,6 @@ $db['dev'] = array(
     'hostname' => 'localhost',
     'username' => 'root',
     'password' => 'Tevatron@12345',
-
     'database' => 'bass',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
