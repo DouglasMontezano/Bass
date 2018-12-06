@@ -9,23 +9,19 @@
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
        <div class="container fluid ">
-              <div class="row">
+            <div class="row">
                 <div class= "col-md-12 ">
                     <h2 >Editar Cliente</h2><br>
                      <caption>* Campos Obrigatórios</caption><br><br>
                 </div>
             </div>
-
             <div class="row">
                 <div class= "col-md-12 ">
-                     <form class="form control " action="<?= base_url()?>Clientes/SalvarEditClientes" method="post" >
-
+                     <form class="form control " action="<?=base_url()?>Clientes/SalvarEditClientes" method="post" >
                                 <input type="hidden" name="id_cliente" id="id_cliente" value="<?=$clientes[0]->id_cliente;?>"></input>
                         <div class="row">
-
                             <div class="col-md-6">
                                 <label for="nome">Nome: *</label>
                                 <input type="text" class="form-control" id="nome_cliente" name="nome_cliente"  placeholder="Informe o nome do cliente" required value="<?=$clientes[0]->nome_cliente;?>" ></input>
@@ -83,14 +79,11 @@
                     <div clas="row">
                         <div class="col-md-4" text-center>
                             <?php
-                                if($clientes[0]->desativado==''or $clientes[0]->desativado=='0')
-                                    {
-                                        echo  "<label class='checkbox-inline'> <input type='checkbox' name='desativado' value='1'unchecked> Desativado </label>";
-                                    }
-                                else
-                                    {
-                                        echo  "<label class='checkbox-inline'> <input type='checkbox' name='desativado' value='1' checked> Desativado </label>";
-                                    }
+                            if ($clientes[0]->desativado == '' or $clientes[0]->desativado == '0') {
+                                echo "<label class='checkbox-inline'> <input type='checkbox' name='desativado' value='1'unchecked> Desativado </label>";
+                            } else {
+                                echo "<label class='checkbox-inline'> <input type='checkbox' name='desativado' value='1' checked> Desativado </label>";
+                            }
                             ?>
                         </div>
                     </div>
