@@ -1,24 +1,45 @@
 /*css criado para montar a nav usada como padrão em várias telas*/
 
 .section {
- display: block;
- position: relative;
- padding: 35px 0;
+  display: block;
+  position: relative;
+  padding: 35px 0;
+  border-bottom: 1px solid #2088b3;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 2.5rem !important;
+  color: #ffffff !important;
 }
 
 .section-primary {
- background-color: #337cbb !important;
- color: #ffffff !important;
+  /* background-color: #337cbb !important; */
+  background-color: #2180a7 !important;
+  color: #ffffff !important;
+
 }
 
 .text-inverse {
- color: #ffffff;
+  color: #ffffff !important;
 }
 
 .cover h1.text-inverse {
- color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .jumbotron h1.text-inverse {
- color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.btn {
+  /* background: #337cbb; */
+  background: #2180a7;
+}
+
+.search {
+  margin-top: 6%;
+  margin-left: 42%;
+  margin-right: 0%;
+  float: right;
 }
