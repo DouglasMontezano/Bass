@@ -17,7 +17,15 @@
   /* background-color: #337cbb !important; */
   background-color: #2180a7 !important;
   color: #ffffff !important;
+}
 
+a i {
+  text-align: center;
+  position: relative;
+  /* position: center; */
+  left: 50%;
+  top: 50%;
+  width: 100% !important;
 }
 
 .text-inverse {
@@ -38,8 +46,9 @@
 }
 
 .search {
-  margin-top: 6%;
-  margin-left: 42%;
-  margin-right: 0%;
+  position: relative;
+  margin-top: 2%;
+  margin-left: 50%;
+  margin-right: 10%;
   float: right;
 }
