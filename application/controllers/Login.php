@@ -23,7 +23,6 @@ class Login extends CI_Controller
 	}
 	// Função que loga o funcionario
 	public function Logar()
-
 	{		
 		//post vindo do form de login
 		$data['email'] = $this->input->post('email');

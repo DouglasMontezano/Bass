@@ -76,9 +76,9 @@ $query_builder = true;
 
 $db['prod'] = array(
     'dsn' => '',
-    'hostname' => 'localhost',
+    'hostname' => 'localhost:3306',
     'username' => 'root',
-    'password' => '',
+    'password' => 'tevatron',
     'database' => 'bass',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
@@ -97,9 +97,9 @@ $db['prod'] = array(
 );
 $db['dev'] = array(
     'dsn' => '',
-    'hostname' => 'localhost',
+    'hostname' => 'localhost:3306',
     'username' => 'root',
-    'password' => '',
+    'password' => 'tevatron',
     'database' => 'bass',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
