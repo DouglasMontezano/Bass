@@ -4,6 +4,7 @@
         <div class="title-nav">
             <h3>Administrativo</h3>
         </div>
+        <div>
         <ul>
             <li><a href="<?= base_url() ?>Clientes/PainelClientes"><i class="fa fa-3x fa-fw text-inverse fa-user  text-left ">
                         <h5>Clientes</h5>
