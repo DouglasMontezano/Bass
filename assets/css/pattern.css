@@ -36,8 +36,8 @@
 .nav ul li {
     width: 100px;
     margin-top:20px;
-    /* font-size: 10px; */
-    display: inline-block;
+    display:flex;
+    
     font-size: 5px;
     /* margin-left:20px; */
     text-align: justify;
