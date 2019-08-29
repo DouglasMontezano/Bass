@@ -1,3 +1,4 @@
+
 <body onload="chartdataload()">
     <!-- <div class="container container-fluid "> -->
     <nav class="nav">
@@ -6,19 +7,18 @@
         </div>
         <ul>
             <li><a href="<?= base_url() ?>Clientes/PainelClientes"><i class="fa fa-3x fa-fw text-inverse fa-user  text-left ">
-                        Clientes </i></a></li>
+                        Clientes
+                    </i></a></li>
             <li><a href="<?= base_url() ?>Produtos_Servicos/PainelProdutos"><i class="fa fa-3x fa-fw text-inverse fa fa-product-hunt  text-left">
                         Produtos
                     </i></a></li>
             <li><a href="<?= base_url() ?>produtos_Servicos/PainelServicos"><i class="fa fa-3x fa-fw text-inverse text-left fa-wrench">
                         Serviços
                     </i></a></li>
-
             <li><a href="<?= base_url() ?>Os/PainelOs"><i class="fa fa-3x fa-fw text-inverse fa text-left fa-book">
                         O.S
                     </i></a></li>
             <li><a href="<?= base_url() ?>Funcionarios/PainelFuncionarios"><i class="fa fa-3x fa-fw text-inverse fa fa-street-view text-left">
-
                         Funcionários
                     </i></a></li>
 
@@ -45,29 +45,18 @@
             <li><a href="<?= base_url() ?>Login/Logout"><i class="fa fa-3x fa-fw text-inverse fa fa-sign-out" aria-hidden="true">
                         Logout
                     </i></a></li>
-
-            <input type="checkbox" id="chec">
-            <label for="check">
-                <img src="../assets/img/img/Hamburger_icon.svg.png">
-            </label>
         </ul>
     </nav>
-    <script>
-        menu.addEventListener('click', function(e) {
-            drawer.classList.toggle('open');
-            e.stopPropagation();
-        });
-    </script>
-    <!-- <div class="row">
+    <div class="row">
+        <div class="col-md-12">
             <div class="col-md-12">
-                <div class="col-md-12">
-                    <div id="chart_div"></div>
-                </div>
-                <div class="col-md-12">
-                    <div id="chart_div2"></div>
-                </div>
+                <div id="chart_div"></div>
             </div>
-        </div> -->
+            <div class="col-md-12">
+                <div id="chart_div2"></div>
+            </div>
+        </div>
+    </div>
 </body>
-
+>>>>>>> master
 </html>
