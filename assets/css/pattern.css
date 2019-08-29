@@ -1,49 +1,74 @@
-.nav {
-    height: 150px;
-    max-width: 100%;
-    position: top;
-    flex-wrap: wrap;
-    z-index: 100;
-    background-color: #5c99e9;
-    padding: 2px 10px;
-    display: flex;
-}
-
-.nav h1 h2 h3 h4 h5 {
-    color: #ffffff;
-    text-align: center;
-}
-
-.title-nav {
-    max-width: 25%;
-    display: flex;
-    float: left;
-    color: #ffffff;
-    padding: 30px;
-    text-decoration: none;
-}
-
-.nav ul {
-    width: 80%;
-    padding: 30px;
-    list-style: none;
-    /* text-align: left; */
-    /* text-align: justify; */
-}
-
-.nav ul li {
-    /* font-size: 10px; */
-    display: inline;
-    /* padding: 0px; */
-}
-
-.nav ul li a i {
-    /* color: #ffffff;
-    width: 65px;
-    text-align: center;
-    margin-right: 2px; */
-    padding: 2px 10px;
-    display: inline-block;
-    color: #EDEDED;
-    text-decoration: none;
-}
+    .nav {
+        height: 150px;
+        max-width: 100%;
+        /* position: top; */
+        position: relative;
+        flex-wrap: wrap;
+        z-index: 100;
+        background-color: #5c99e9;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav h1 h2 h3 h4 h5 {
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .title-nav {
+        max-width: 20%;
+        display: flex;
+        float: left;
+        color: #ffffff;
+        padding: 30px;
+        margin-left: 25px;
+        text-decoration: none;
+    }
+    
+    .nav ul {
+        max-width: 80%;
+        max-height: 100px;
+        padding: 30px;
+        position: relative;
+        list-style: none;
+    }
+    
+    .nav ul li {
+        display: inline;
+        margin-left: 20px;
+        position: relative;
+    }
+    
+    .nav ul li a {
+        padding: 10px;
+        display: inline-block;
+        color: #EDEDED;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+    input[type="checkbox"] {
+        z-index: 100;
+        display: none;
+    }
+    
+    @media screen and (max-width: 550px) {
+        .nav {
+            height: 100%;
+            width: 300px;
+            position: absolute;
+            /* -webkit-transform: translate(-300px, 0); */
+            transform: translate(-300px, 0);
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .nav.open {
+            /* -webkit-transform: translate(0, 0); */
+            transform: translate(0, 0);
+        }
+        img {
+            width: 40px;
+        }
+    }
+    
+    @media screen and (max-width:1550px) {}
