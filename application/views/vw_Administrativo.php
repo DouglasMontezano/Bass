@@ -1,4 +1,3 @@
-
 <body onload="chartdataload()">
     <!-- <div class="container container-fluid "> -->
     <nav class="nav">
@@ -6,45 +5,73 @@
             <h3>Administrativo</h3>
         </div>
         <ul>
-            <li><a href="<?= base_url() ?>Clientes/PainelClientes"><i class="fa fa-3x fa-fw text-inverse fa-user  text-left ">
-                        Clientes
-                    </i></a></li>
-            <li><a href="<?= base_url() ?>Produtos_Servicos/PainelProdutos"><i class="fa fa-3x fa-fw text-inverse fa fa-product-hunt  text-left">
-                        Produtos
-                    </i></a></li>
-            <li><a href="<?= base_url() ?>produtos_Servicos/PainelServicos"><i class="fa fa-3x fa-fw text-inverse text-left fa-wrench">
-                        Serviços
-                    </i></a></li>
-            <li><a href="<?= base_url() ?>Os/PainelOs"><i class="fa fa-3x fa-fw text-inverse fa text-left fa-book">
-                        O.S
-                    </i></a></li>
-            <li><a href="<?= base_url() ?>Funcionarios/PainelFuncionarios"><i class="fa fa-3x fa-fw text-inverse fa fa-street-view text-left">
-                        Funcionários
-                    </i></a></li>
+            <li>
+                <a href="<?= base_url() ?>Clientes/PainelClientes">
+                    <i class="fa fa-3x fa-fw fa-user"></i>
+                    <p>Clientes</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Produtos_Servicos/PainelProdutos">
+                    <i class="fa fa-3x fa-fw  fa fa-product-hunt"></i>
+                    <p>Produtos</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>produtos_Servicos/PainelServicos">
+                    <i class="fa fa-3x fa-fw fa-wrench"></i>
+                    <p>Serviços</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Os/PainelOs">
+                    <i class="fa fa-3x fa-fw fa fa-book"></i>
+                    <p>O.S</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Funcionarios/PainelFuncionarios">
+                    <i class="fa fa-3x fa-fw fa fa-street-view"></i>
+                    <p>Funcionários</p>
+                </a>
+            </li>
 
-            <li><a href="<?= base_url() ?>Fornecedores/PainelFornecedores"><i class="fa fa-3x fa-fw text-inverse fa fa-user-circle-o">
-                        Fornecedores
-                    </i></a></li>
-
-            <li><a href="<?= base_url() ?>Vendas/PainelVendas"><i class="fa fa-3x fa-fw text-inverse fa fa-shopping-cart text-left">
-                        Vendas
-                    </i></a></li>
-
-            <li><a href="<?= base_url() ?>Lancamentos/PainelLancamentos"><i class="fa fa-3x fa-fw text-inverse fa fa-leanpub text-left">
-                        Lançamentos
-                    </i></a></li>
-
-            <li><a href="<?= base_url() ?>Fluxo/PainelFluxo"><i class="fa fa-3x fa-fw text-inverse fa fa-usd text-left">
-                        Fluxo.C
-                    </i></a></li>
-
-            <li> <a href="<?= base_url() ?>Relatorios/PainelRelatorios"><i class="fa fa-3x fa-fw text-inverse fa fa-file-text text-left">
-                        Relatórios
-                    </i></a></li>
-
-            <li><a href="<?= base_url() ?>Login/Logout"><i class="fa fa-3x fa-fw text-inverse fa fa-sign-out" aria-hidden="true">
-                        Logout
-                    </i></a></li>
+            <li>
+                <a href="<?= base_url() ?>Fornecedores/PainelFornecedores">
+                    <i class="fa fa-3x fa-fw fa fa-user-circle-o"></i>
+                    <p>Fornecedores</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Vendas/PainelVendas">
+                    <i class="fa fa-3x fa-fw fa fa-shopping-cart"></i>
+                    <p>Vendas</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Lancamentos/PainelLancamentos">
+                    <i class="fa fa-3x fa-fw fa fa-leanpub"></i>
+                    <p>Lançamentos</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Fluxo/PainelFluxo">
+                    <i class="fa fa-3x fa-fw fa fa-usd"></i>
+                    <p>Fluxo.C</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Relatorios/PainelRelatorios">
+                    <i class="fa fa-3x fa-fw fa fa-file-text"></i>
+                    <p>Relatórios</p>
+                </a>
+            </li>
+            <li>
+                <a href="<?= base_url() ?>Login/Logout">
+                    <i class="fa fa-3x fa-fw fa fa-sign-out" aria-hidden="true"></i>
+                    <p>Logout</p>
+                </a>
+            </li>
         </ul>
     </nav>
     <div class="row">
@@ -58,5 +85,5 @@
         </div>
     </div>
 </body>
->>>>>>> master
+
 </html>
