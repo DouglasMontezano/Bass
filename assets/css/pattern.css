@@ -25,6 +25,7 @@
 
 .nav ul {
     display: flex;
+    height: 50px;
     width: 75%;
     margin-left: 0px;
     margin-right: auto;
@@ -37,19 +38,25 @@
 
 .nav ul li {
     display: flex;
+    /* margin-top: auto; */
     margin-left: 0px;
     margin-right: 20px;
-    /* width: 80px; */
     justify-content: center;
     position: relative;
 }
 
+.nav ul li:hover {
+    background-color: #74e2d9;
+}
+
 .nav ul li a {
+    height: 55px;
     text-align: center;
     position: relative;
 }
 
 .nav ul li a i {
+    margin-top: auto;
     color: #EDEDED;
     text-decoration: none;
     font-size: 35px;
@@ -61,4 +68,5 @@
     color: #EDEDED;
     font-size: 15px;
     position: relative;
+    text-decoration: none;
 }
