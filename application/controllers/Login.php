@@ -5,7 +5,8 @@ class Login extends CI_Controller
 	public function Index()
 	{
 		$title = 'Login';
-		$this->template->load("layouts/lay_login/lay_login.php", "vw_Login");
+		// $this->template->load("layouts/lay_login/lay_login.php", "vw_Login");
+		$this->template->load("layouts/lay_pattern.php", "vw_Login");
 	}
 	//verifica sessao
 	public function Verifica_Sessao()

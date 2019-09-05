@@ -12,6 +12,6 @@ class Administrativo extends CI_Controller
     public function PainelAdministrativo()
     {
         $this->Verifica_Sessao();
-        $this->template->load("layouts/lay_adm/lay_adm.php", "vw_Administrativo");
+        $this->template->load("layouts/lay_pattern.php", "vw_Administrativo");
     }
 }

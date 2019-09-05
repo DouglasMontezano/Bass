@@ -1,4 +1,5 @@
-
+<link type="text/css" href="<?php echo base_url(); ?>assets/css/Login.css" rel= "stylesheet">
+</head>
 		<header>
 			<h1>Bass Auto Center</h1>
 			<p>Projetos Automotivos</p>
