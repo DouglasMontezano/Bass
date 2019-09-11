@@ -1,7 +1,7 @@
 <link type="text/css" href="<?php echo base_url(); ?>assets/css/Login.css" rel="stylesheet">
 </head>
 	<body>
-	<!-- <div class="col-md-7"> -->
+	<div class="col-md-12">
 		<header>
 			<h1>Bass Auto Center</h1>
 			<p>Projetos Automotivos</p>
@@ -44,6 +44,6 @@
 				</label>
 			</div>
 		</section>
-	<!-- </div>	 -->
+	</div>	
 	</body>
 </html>
