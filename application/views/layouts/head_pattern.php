@@ -12,9 +12,8 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
      
-    <link type="text/css" href="<?php echo base_url(); ?>assets/css/Reset.css"rel="stylesheet">  
-    <!-- <link type="text/css" href="<?php echo base_url(); ?>assets/css/home.css"rel="stylesheet">    -->
+    <link type="text/css" href="<?php echo base_url(); ?>assets/css/Reset.css"rel="stylesheet">     
     <link type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet">
     <link type="text/css" href="<?php echo base_url(); ?>assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"rel="stylesheet">
     <link type="text/css" href="<?php echo base_url(); ?>assets/css/pattern.css"rel="stylesheet">    
-    <!-- <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">   -->
+  
