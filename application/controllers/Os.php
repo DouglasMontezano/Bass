@@ -17,9 +17,8 @@ class Os extends CI_Controller
     //Função que lista as OS
     public function ListOs()
     {
-        $this->Verifica_Sessao();
-        // $this->load->view('vw_Cabecalho');
-        $this->template->load("layouts/lay_pattern", "vw_Os");
+        $this->Verifica_Sessao();        
+        $this->template->load("layouts/lay_pattern", "vw_Os");        
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $retorno = $objModel->GETALL();
@@ -29,8 +28,7 @@ class Os extends CI_Controller
     public function FormCadOs()
     {
         $this->Verifica_Sessao();
-        $this->template->load("layouts/lay_pattern", "vw_Os");
-        // $this->load->view('vw_Os');
+        $this->template->load("layouts/lay_pattern", "vw_Os");        
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $retorno = $objModel->GETCLI();
@@ -59,8 +57,8 @@ class Os extends CI_Controller
     // Função Edita cliente-> faz um select em clientes, funcionarios e na os do id passado, junta tudo em um array e carrega a vw_Edita_Os
     public function FormEditOs($id = null)
     {
-        $this->Verifica_Sessao();
-        $this->load->view('vw_Os');
+        $this->Verifica_Sessao();        
+        $this->template->load("layouts/lay_pattern", "vw_Os"); 
 
         $this->load->model('model_Os');
         $objModel = new model_Os();
@@ -89,7 +87,6 @@ class Os extends CI_Controller
         $vet['placa'] = $this->input->post('placa');
         $vet['veiculo'] = $this->input->post('veiculo');
         $vet['descricao_os'] = $this->input->post('descricao');
-
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $objModel->UPDATE($id, $vet);
@@ -121,7 +118,8 @@ class Os extends CI_Controller
     public function FormCadItensOs($id)
     {
         $this->Verifica_Sessao();
-        $this->load->view('vw_Os');
+        // $this->load->view('vw_Os');
+        $this->template->load("layouts/lay_pattern", "vw_Os"); 
         $this->load->model('model_Os');
         $objModel = new model_Os();
         //criando um elemento do array com a $id e recebendo na variável $data1
@@ -136,12 +134,11 @@ class Os extends CI_Controller
     public function ListProdServ($id = null)
     {
         $this->Verifica_Sessao();
-
         //Busca itens dessa OS
         $this->load->model('model_Os');
         $objModel = new model_Os();
-        $retorno = $objModel->GETALLITENSOS($id);
-        $this->load->view('vw_Os');
+        $retorno = $objModel->GETALLITENSOS($id);       
+        $this->template->load("layouts/lay_pattern", "vw_Os"); 
         //Carrega a vw_DadosPdv_Os
         $this->load->model('model_Os');
         $objModel = new model_Os();
