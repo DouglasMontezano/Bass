@@ -5,23 +5,25 @@
     display: flex;
     height: 100px;
     max-width: 100%;
-    /* max-width: 100%; */
+    
     z-index: 100;
     position: top;    
     background-color: #5c99e9;
+   
 }
 
 .nav h1 h2 h3 h4 h5 {
     color: #ffffff;
     text-align: center;
+    
 }
 
 .title-nav {
     display: flex;
     max-width: 100%;   
     max-height: 40px;
-    margin: auto 90px auto 100px;    
-    font-size: 36px;
+    margin: auto 35px auto auto;    
+    font-size: 30px;
     position: relative;
     color: #ffffff;
     text-shadow: black 0.1em 0.1em 0.2em
@@ -32,7 +34,7 @@
     flex-wrap: wrap;
     height: 100%;
     width: auto;
-    margin: auto 200px auto 0px;
+    margin: auto auto auto 0px;
     list-style: none;   
     position: relative;
     

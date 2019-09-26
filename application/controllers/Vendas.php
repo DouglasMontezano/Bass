@@ -62,7 +62,7 @@ class Vendas extends CI_Controller
     public function FormEditVendas($id = null)
     {
         $this->Verifica_Sessao();
-        $this->load->view('vw_Vendas');
+        $this->template->load("layouts/lay_pattern", "vw_Vendas");
         $this->load->model('model_Vendas');
 
         $objModel = new model_Vendas();
@@ -101,7 +101,7 @@ class Vendas extends CI_Controller
     {
         $this->Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Vendas');
+        $this->template->load("layouts/lay_pattern", "vw_Vendas");
         $this->load->model('model_Vendas');
         $objModel = new model_Vendas();
         $retorno = $objModel->GetForVendas($busca);
@@ -124,7 +124,7 @@ class Vendas extends CI_Controller
     public function FormCadItensVendas($id)
     {
         $this->Verifica_Sessao();
-        $this->load->view('vw_Vendas');
+        $this->template->load("layouts/lay_pattern", "vw_Vendas");
         $this->load->model('model_Vendas');
         $objModel = new model_Vendas();
         //criando um elemento do array com a $id e recebendo na variável $data1
@@ -156,7 +156,7 @@ class Vendas extends CI_Controller
         
         // if caso seja uma nova venda não mostrar duas vezes o painel vendas..provisório definitivo :) .
         if ($id !== 0) {
-            $this->load->view('vw_Vendas');
+            $this->template->load("layouts/lay_pattern", "vw_Vendas");
         }
         // Se a variável $retorno for vazia, ou seja a VENDA não ter itens, irá cadastrar itens no primeiro momento, se já tiver itens,
         // o sistema mostrará os dados da venda com a listagem dos itens.
@@ -165,8 +165,7 @@ class Vendas extends CI_Controller
             $data2['prodserv'] = $objModel->GETPRODSERV();
             $this->load->view('vw_Cad_Itens_Vendas', array_merge($data1, $data2));
         } else {
-            $this->load->view('vw_DadosPdv_Vendas', array('vendas' => $retorno2));
-            // $this->load->view('vw_Lista_Itens_Vendas', array('resultado' => $retorno));
+            $this->load->view('vw_DadosPdv_Vendas', array('vendas' => $retorno2));            
             $this->load->view('vw_Lista_Itens_Vendas', array_merge(array('existvenda' => $retorno3))
                 + (array('resultado' => $retorno)) + (array('cod_lancamento' => $retorna_cod_lancamento)));
         }

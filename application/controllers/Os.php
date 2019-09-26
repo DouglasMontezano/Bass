@@ -97,7 +97,7 @@ class Os extends CI_Controller
     {
         $this->Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Os');
+        $this->template->load("layouts/lay_pattern", "vw_Os"); 
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $retorno = $objModel->GetForOs($busca);

@@ -110,7 +110,7 @@ class Clientes extends CI_Controller
   {
     $this->Verifica_Sessao();
     $busca = $this->input->post('busca');
-    $this->load->view('vw_Clientes');
+    $this->template->load("layouts/lay_pattern", "vw_Clientes");
     $this->load->model('model_Clientes');
     $objModel = new Model_Clientes();
     $retorno = $objModel->GetForCli($busca);

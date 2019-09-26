@@ -1,9 +1,9 @@
         <br>
         <br>
-            <div class="container">            
+            <div class="row">            
                 <div class="col-md-12">
                     <caption> Listando Produtos e Serviços da Ordem de Serviço Nº: <?=$resultado[0]->id_os;?> </caption>
-                    <table class=" table table-striped "><br><br>
+                    <table class=" table table-striped">
                         <thead>
                             <tr>
                                 <th> Item Nº</th>

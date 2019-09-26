@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 
-<div class="container">
+
+<div class="container container-fluid">
     <div class="row">
         <div class="col-md-12 ">
             <h2>Editar Ordem de Serviço</h2><br>
@@ -93,5 +93,3 @@
             <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
         </div>
     </form>
-</div>
-</body>

@@ -28,7 +28,7 @@ class Produtos_Servicos extends CI_Controller
     public function FormCadProdutos()
     {
         $this->Verifica_Sessao();
-        $this->load->view('vw_Produtos');
+        $this->template->load("layouts/lay_pattern.php", "vw_Produtos");
         $this->load->view('vw_Cad_Produtos');
     }
 
@@ -54,7 +54,7 @@ class Produtos_Servicos extends CI_Controller
     public function EditProdutos($id = null)
     {
         $this->Verifica_Sessao();
-        $this->load->view('vw_Produtos');
+        $this->template->load("layouts/lay_pattern.php", "vw_Produtos");
         $this->load->model('model_Produtos_Servicos');
         $objModel = new model_Produtos_Servicos();
         $data['produtos'] = $objModel->GETBYID($id);
@@ -83,7 +83,7 @@ class Produtos_Servicos extends CI_Controller
     {
         $this->Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Produtos');
+        $this->template->load("layouts/lay_pattern.php", "vw_Produtos");
         $this->load->model('model_Produtos_Servicos');
         $objModel = new model_Produtos_Servicos();
         $retorno = $objModel->GetForProd($busca);
@@ -92,8 +92,8 @@ class Produtos_Servicos extends CI_Controller
 
     public function ListProdutos()
     {
-        $this->Verifica_Sessao();
-        $this->load->view('vw_Produtos');
+        $this->Verifica_Sessao();       
+        $this->template->load("layouts/lay_pattern.php", "vw_Produtos");
         $this->load->model('model_Produtos_Servicos');
         $objModel = new model_Produtos_Servicos();
         $retorno = $objModel->GETALL_Prod();
@@ -174,7 +174,7 @@ class Produtos_Servicos extends CI_Controller
     {
         $this->Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Servicos');
+        $this->template->load("layouts/lay_pattern.php", "vw_Servicos");
         $this->load->model('model_Produtos_Servicos');
         $objModel = new model_Produtos_Servicos();
         $retorno = $objModel->GetForServ($busca);

@@ -1,19 +1,19 @@
 <br>
 <br>
 <div class="container">
-    <div class="col-md-12">
-        <table class=" table table-striped ">
-            <caption> Listando Vendas</caption>
+    <div class="col-md-12"><br>
+    <caption> Listando Vendas</caption>
+        <table class=" table table-striped">            
             <thead>
-            <tr>
-                <th> Código</th>
-                <th> Cliente</th>
-                <th> Funcionário</th>
-                <th> Tipo Venda</th>
-                <th> Data</th>
-                <th> Valor Total</th>
-                <th> Situação</th>
-            </tr>
+                <tr>
+                    <th> Código</th>
+                    <th> Cliente</th>
+                    <th> Funcionário</th>
+                    <th> Tipo Venda</th>
+                    <th> Data</th>
+                    <th> Valor Total</th>
+                    <th> Situação</th>
+                </tr>
             </thead>
             <tbody>
             <?php foreach ($resultado as $obj) { ?>
@@ -34,7 +34,6 @@
                 </tr>
             <?php } ?>
             </tbody>
-
         </table>
     </div>
 </div>

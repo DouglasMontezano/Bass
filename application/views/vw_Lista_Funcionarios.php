@@ -2,8 +2,8 @@
     <br>
     <br>
     <div class="col-md-12">
-        <table class=" table table-striped ">
-            <caption>Listando Funcionários</caption>
+    <caption>Listando Funcionários</caption>
+        <table class=" table table-striped ">           
             <thead>
             <tr>
                 <th> Código</th>
