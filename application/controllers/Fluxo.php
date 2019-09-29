@@ -3,8 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Fluxo extends CI_Controller
 {
-
-
     public function Verifica_Sessao()
     {
         if ($this->session->userdata('logado') == false) {
@@ -33,13 +31,10 @@ class Fluxo extends CI_Controller
     {
         $this->Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Fluxo');
+        // $this->load->view('vw_Fluxo');
         $this->load->model('model_Fluxo');
         $objModel = new model_Fluxo();
         $retorno = $objModel->GETFORFLUXO($busca);
         $this->load->view('vw_Lista_Fluxo', array('resultado' => $retorno));
     }
 }
-
-
-

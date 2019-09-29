@@ -26,8 +26,9 @@
                     <td><?=  number_format( $obj->valor_tot_venda, 2, ',', '.');   ?></td>
                     <td><?= $obj->situacao_venda; ?></td>
                     <td align=right>
-                        <a href="<?= base_url('Vendas/ListProdServ/' . $obj->id_venda) ?>" class="btn btn-success btn-group">Ver </a>
-                        <a href="<?= base_url('Vendas/FormEditVendas/' . $obj->id_venda) ?>" class="btn btn-info btn-group"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>
+                        <!-- <a href="<?= base_url('Vendas/ListProdServ/' . $obj->id_venda) ?>" class="btn btn-success btn-group">Ver </a> -->
+                        <a href="<?= base_url('Vendas/ListProdServ/' . $obj->id_venda) ?>" class="btn btn-success btn-group"><i class="fa fa-eye" aria-hidden="true"></i> </a>
+                        <a href="<?= base_url('Vendas/FormEditVendas/' . $obj->id_venda) ?>" class="btn btn-info btn-group"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> </a>                       
                         <a href="<?= base_url('Vendas/ExcVendas/' . $obj->id_venda) ?>" class="btn btn-danger btn-group"onclick="return confirm('Deseja realmente excluir a Vendas?');"><i class="fa fa-trash" aria-hidden="true"></i>
                         </a>
                     </td>

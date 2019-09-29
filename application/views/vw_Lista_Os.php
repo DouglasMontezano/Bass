@@ -26,7 +26,7 @@
                     <td><?=$obj->nome_funcionario;?></td>
                     <td><?=$obj->situacao;?></td>
                     <td align=right>
-                        <a href="<?=base_url('Os/ListProdServ/' . $obj->id_os)?>" class="btn btn-success btn-group">Ver </a>
+                        <a href="<?=base_url('Os/ListProdServ/' . $obj->id_os)?>" class="btn btn-success btn-group"><i class="fa fa-eye" aria-hidden="true"></i></a>
                         <a href="<?=base_url('Os/FormEditOs/' . $obj->id_os)?>" class="btn btn-info btn-group"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                         <a href="<?=base_url('Os/ExcOs/' . $obj->id_os)?>" class="btn btn-danger btn-group"onclick="return confirm('Deseja realmente excluir a OS?');"><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </td>
