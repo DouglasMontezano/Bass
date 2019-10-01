@@ -1,6 +1,6 @@
         <br>
         <br>
-            <div class="row">            
+            <div class="container container-fluid">            
                 <div class="col-md-12">
                     <caption> Listando Produtos e Serviços da Ordem de Serviço Nº: <?=$resultado[0]->id_os;?> </caption>
                     <table class=" table table-striped">
