@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-md-12">
                 <caption> Listando Produtos e Serviços da Venda Nº: <?=$resultado[0]->id_venda;?>  </caption>
-                    <table class=" table table-striped ">
+                <table class=" table table-striped table-dark table-bordered table-hover ">
                         <thead>
                         <tr> </tr>
                         <tr>

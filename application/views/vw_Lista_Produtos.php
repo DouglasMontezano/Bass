@@ -3,7 +3,7 @@
 <div class="container">
     <div class="col-md-12">
     <caption> Listando Produtos</caption>
-        <table class=" table table-striped ">
+    <table class=" table table-striped table-dark table-bordered table-hover ">
             
             <thead>
             <tr>

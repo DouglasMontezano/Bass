@@ -1,16 +1,15 @@
-    <div class="container">
+    <div class="container conatiner fluid">
       <br>
-      <br>
-      <caption> Listando Serviços</caption>
+      <br>      
       <div class="col-md-12">
-        <table class=" table table-striped">        
+      <caption> Listando Serviços</caption>
+      <table class=" table table-striped table-dark table-bordered table-hover ">       
           <thead>
             <tr>
               <th> Código </th>
               <th> Serviço </th>
               <th> Tipo </th>
               <th> Valor do Serviço </th>
-              <!-- <th>  </th> -->
             </tr>
           </thead>
           <tbody>
