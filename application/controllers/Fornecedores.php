@@ -26,7 +26,8 @@ class Fornecedores extends CI_Controller {
     public function FormCadFornecedores()
     {
         $this-> Verifica_Sessao();
-        $this->load->view('vw_Fornecedores');
+        // $this->load->view('vw_Fornecedores');
+        $this->template->load("layouts/lay_pattern.php", "vw_Fornecedores");
         $this->load->view('vw_Cad_Fornecedores');
     }
 ////////////////////////////////////////////////////////////////////////// Função de cadastro de clientes
@@ -82,7 +83,7 @@ class Fornecedores extends CI_Controller {
         $this->load->model('model_Fornecedores');
         $objModel = new Model_Fornecedores();
         $data['fornecedores']= $objModel->GETBYID($id);
-        $this->load->view('vw_Fornecedores');
+        $this->template->load("layouts/lay_pattern.php", "vw_Fornecedores");
         $this->load->view('vw_Edita_Fornecedores',$data);
     }
 ///////////////////////////////////////////////////////////////////////////////// Função que carrega variáveis com o post vindo do form e depois atualiza no banco
@@ -113,7 +114,7 @@ class Fornecedores extends CI_Controller {
     public function ListFornecedores()
     {
         $this-> Verifica_Sessao();
-        $this->load->view('vw_Fornecedores');
+        $this->template->load("layouts/lay_pattern.php", "vw_Fornecedores");
         $this->load->model('model_Fornecedores');
         $objModel = new Model_Fornecedores();
         $retorno = $objModel->GETALL();
@@ -124,7 +125,7 @@ class Fornecedores extends CI_Controller {
     {
         $this-> Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Fornecedores');
+        $this->template->load("layouts/lay_pattern.php", "vw_Fornecedores");
         $this->load->model('model_Fornecedores');
         $objModel = new Model_Fornecedores();
         $retorno = $objModel-> GetForFornecedores($busca);

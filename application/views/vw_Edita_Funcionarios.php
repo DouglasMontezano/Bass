@@ -1,19 +1,18 @@
-<body>
-<div class="container fluid ">
+
+<div class="container container-fluid ">
     <div class="row">
         <div class="col-md-12 ">
-            <h2>Editar Funcionário</h2><br>
-            <caption>* Campos Obrigatórios</caption>
-            <br><br>
+        <br><br>
+            <h4>Editar Funcionário</h4><br>
+            <caption>* Campos Obrigatórios</caption> <br><br>
         </div>
     </div>
     <?php echo validation_errors(); ?>
-    <form class="form control " action="<?= base_url() ?>Funcionarios/SalvarEditFuncionarios" method="post" rule="form">
+    <form class="form control " action="<?=base_url()?>Funcionarios/SalvarEditFuncionarios" method="post" rule="form">
+
+        <div class="row"> <input type="hidden" name="id_funcionario" id="id_funcionario" value="<?=$funcionarios[0]->id_funcionario;?>"></input> </div>    
+       
         <div class="row">
-
-            <input type="hidden" name="id_funcionario" id="id_funcionario" value="<?=$funcionarios[0]->id_funcionario;?>"></input>
-            <div class="row">
-
             <div class="col-md-6 ">
                 <label for="nome">Nome: *</label>
                 <input type="text" class="form-control" id="nome_funcionario" name="nome_funcionario"
@@ -73,9 +72,7 @@
                        placeholder="Bairro do funcionário" value="<?=$funcionarios[0]->bairro_funcionario;?>"></input>
             </div>
         </div>
-
         <br>
-
         <div class="row">
             <div class="col-md-4">
                 <label for="cidade">Cidade: *</label>
@@ -90,7 +87,7 @@
             <div class="col-md-3">
                 <label for="data_entrada_funcionario">Data início do contrato</label>
                 <input type="text" class="form-control" id="data_inicio_funcionario" name="data_inicio_funcionario"
-                       placeholder="Início do Contrato" value="<?=date('d/m/Y',strtotime($funcionarios[0]->data_inicio_funcionario));?>"></input>
+                       placeholder="Início do Contrato" value="<?=date('d/m/Y', strtotime($funcionarios[0]->data_inicio_funcionario));?>"></input>
             </div>
             <div class="col-md-3">
                 <label for="salario_funcionario">Salário do funcionário</label>
@@ -100,13 +97,13 @@
         </div>
 
         <div class="row">
-        <span>
-            <div class="col-md-12  ">
-                <br>
-                <button type="submit" class="btn btn-success" name="salvar"> Salvar </button>
-                <button type="reset" class=" btn btn-warning" name="limpar"> Limpar </button>
-            </div>
-        </span>
+            <span>
+                <div class="col-md-12">
+                    <br>
+                    <button type="submit" class="btn btn-success" name="salvar"> Salvar </button>
+                    <button type="reset" class=" btn btn-warning" name="limpar"> Limpar </button>
+                </div>
+            </span>
         </div>
     </form>
 </div>

@@ -18,8 +18,8 @@ class Funcionarios extends CI_Controller
 
     public function ListFuncionarios()
     {
-        $this-> Verifica_Sessao();
-        $this->load->view('vw_Funcionarios');
+        $this-> Verifica_Sessao();        
+        $this->template->load("layouts/lay_pattern.php", "vw_Funcionarios");        
         $this->load->model('model_Funcionarios');
         $objModel = new model_Funcionarios();
         $retorno = $objModel->GETALL();
@@ -39,7 +39,7 @@ class Funcionarios extends CI_Controller
     public function FormCadFuncionarios()
     {
         $this-> Verifica_Sessao();
-        $this->load->view('vw_Funcionarios');
+        $this->template->load("layouts/lay_pattern.php", "vw_Funcionarios");        
         $this->load->view('vw_Cad_Funcionarios');
     }
 
@@ -98,7 +98,7 @@ class Funcionarios extends CI_Controller
         $this->load->model('model_Funcionarios');
         $objModel = new Model_Funcionarios();
         $data['funcionarios'] = $objModel->GETBYID($id);
-        $this->load->view('vw_Funcionarios');
+        $this->template->load("layouts/lay_pattern.php", "vw_Funcionarios");        
         $this->load->view('vw_Edita_Funcionarios', $data);
     }
 
@@ -134,7 +134,7 @@ class Funcionarios extends CI_Controller
     {
         $this-> Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Funcionarios');
+        $this->template->load("layouts/lay_pattern.php", "vw_Funcionarios");        
         $this->load->model('model_Funcionarios');
         $objModel = new Model_Funcionarios();
         $retorno = $objModel-> GetForFunc($busca);

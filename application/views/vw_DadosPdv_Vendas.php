@@ -6,10 +6,9 @@
         </div>
         <br>
     </div>
-    <div class="row">
-        <form class="form control " action="<?= base_url()?>vendas/SalvarEditvendas" method="post">
+        <form class="form control" action="<?=base_url()?>vendas/SalvarEditvendas" method="post">
             <input type="hidden" name="id_venda" id="id_venda" value="<?=$vendas[0]->id_venda;?>"></input>
-
+            <div class="row">
             <div class="col-md-2">
                 <label for="numero_venda">Código:</label>
                 <input disabled="true" type="text" class="form-control" id="numero_venda" name="numero_venda"  placeholder="código da venda" value="<?=$vendas[0]->id_venda;?>"></input>
@@ -25,11 +24,11 @@
             </div>
             <div class="col-md-3">
                 <label for="data_venda">Data Venda:</label>
-                <input disabled="true" type="text" class="form-control" id="data_venda" name="data_venda"  placeholder="Data da Venda" value="<?=date('d/m/Y',strtotime($vendas[0]->data_venda));?>" required></input>
+                <input disabled="true" type="text" class="form-control" id="data_venda" name="data_venda"  placeholder="Data da Venda" value="<?=date('d/m/Y', strtotime($vendas[0]->data_venda));?>" required></input>
             </div>
             <div class="col-md-3">
                 <label for="hora_venda">Hora Venda:</label>
-                <input disabled="true" type="text" class="form-control" id="hora_venda" name="hora_venda"  placeholder="Hora da Venda" value="<?=date('H:i',strtotime($vendas[0]->data_venda));?>"required></input>
+                <input disabled="true" type="text" class="form-control" id="hora_venda" name="hora_venda"  placeholder="Hora da Venda" value="<?=date('H:i', strtotime($vendas[0]->data_venda));?>"required></input>
             <br>
             </div>
 
@@ -42,6 +41,5 @@
                 <input disabled="true" type="text" class="form-control" id="funcionario" name="funcionario"  placeholder="funcionario" value="<?=$vendas[0]->nome_funcionario;?>"></input>
                 <br>
             </div>
-
         </form>
     </div>

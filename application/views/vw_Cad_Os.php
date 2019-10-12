@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-
     <div class="container">
-        <div class="row">
-            <div class= "col-md-12 ">
-                <h2 >Nova Ordem de Serviço</h2><br>
-            </div>
-        </div>
-        <br>
-        <form class="form control " action="<?= base_url()?>Os/CadastraOs" method="post">
+        <br><h2>Nova Ordem de Serviço</h2><br>
+        <form class="form control " action="<?=base_url()?>Os/CadastraOs" method="post">
             <div class="row">
-
                 <div class="col-md-6 ">
                     <div class="form-group">
                         <label for="cliente">Cliente:</label>
                         <select class="form-control" id="cliente" name="cliente" >
                             <option selected>selecione</option>
-                            <?php foreach ($cliente as $nomecliente){?>
-                                <option value="<?=$nomecliente-> id_cliente ;?>"> <?=$nomecliente-> nome_cliente ;?></option>
+                            <?php foreach ($cliente as $nomecliente) {?>
+                                <option value="<?=$nomecliente->id_cliente;?>"> <?=$nomecliente->nome_cliente;?></option>
                             <?php }?>
                         </select>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="situacao">Situação:</label>
@@ -34,10 +26,7 @@
                         </select>
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
-
+               
                 <div class="col-md-2">
                     <label for="data_cheg">Data Entrada:</label>
                     <input type="date" class="form-control" id="data_cheg" name="data_cheg"  placeholder="Data de Entrada" required></input>
@@ -74,21 +63,18 @@
                     <label for="idfuncionario">Responsável pelo Serviço:</label>
                     <select class="form-control" id="idfuncionario" name="idfuncionario">
                        <option selected>selecione</option>
-                        <?php foreach ($funcionario as $nomefuncionario){?>
-                            <option value="<?=$nomefuncionario-> id_funcionario ;?>"> <?=$nomefuncionario-> nome_funcionario ;?></option>
+                        <?php foreach ($funcionario as $nomefuncionario) {?>
+                            <option value="<?=$nomefuncionario->id_funcionario;?>"> <?=$nomefuncionario->nome_funcionario;?></option>
                         <?php }?>
                      </select>
                 </div>
-
             </div>
-
-                <div class="col-md-12  ">
-                    <br>
-                    <br>
-                    <button type="submit" class="btn btn-success"   name="salvar"> Salvar</button>
-                    <button type="reset" class=" btn btn-warning"   name="limpar"> Limpar</button>
+            <div class="row">     
+                <div class="col-md-12  ">                                      
+                    <br><button type="submit" class="btn btn-success"   name="salvar"> Salvar</button>
+                        <button type="reset" class=" btn btn-warning"   name="limpar"> Limpar</button>                
                 </div>
-
+            </div>
         </form>
     </div>
 </body>

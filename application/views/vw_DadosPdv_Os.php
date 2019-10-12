@@ -6,7 +6,7 @@
         </div>
     </div>
     <br>
-    <form class="form control " action="<?= base_url()?>Os/SalvarEditOs" method="post">
+    <form class="form control" action="<?= base_url()?>Os/SalvarEditOs" method="post">
         <div class="row">
             <input type="hidden" name="id_os" id="id_os" value="<?=$os[0]->id_os;?>"></input>
 

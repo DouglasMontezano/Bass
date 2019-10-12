@@ -32,8 +32,7 @@ class Lancamentos extends CI_Controller
     public function FormCadLancamentos()
     {
         $this->Verifica_Sessao();
-        $this->template->load("layouts/lay_pattern", "vw_Lancamentos");
-        // $this->load->view('vw_Lancamentos');
+        $this->template->load("layouts/lay_pattern", "vw_Lancamentos");        
         $this->load->model('model_Lancamentos');
         $objModel = new model_Lancamentos();
         $retorno = $objModel->GETFORNECEDORES();
@@ -95,8 +94,8 @@ class Lancamentos extends CI_Controller
 
     public function EditLancamentos($id = null)
     {
-        $this->Verifica_Sessao();
-        $this->load->view('vw_Lancamentos');
+        $this->Verifica_Sessao();        
+        $this->template->load("layouts/lay_pattern", "vw_Lancamentos");
         $this->load->model('model_Lancamentos');
         $objModel = new model_Lancamentos();
         //Busca os dados da tabela lancamentos para carregar no form
@@ -175,36 +174,13 @@ class Lancamentos extends CI_Controller
     {
         $this->Verifica_Sessao();
         $busca = $this->input->post('busca');
-        $this->load->view('vw_Lancamentos');
+        $this->template->load("layouts/lay_pattern", "vw_Lancamentos");
         $this->load->model('model_Lancamentos');
         $objModel = new model_Lancamentos();
         $retorno = $objModel->GETFORLANCAMENTO($busca);
         $this->load->view('vw_Lista_Lancamentos', array('resultado' => $retorno));
     }
 
-////////////////////////// SERVICOS ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-//    public function FormCadServicos()
-//    {
-//        $this-> Verifica_Sessao();
-//        $this->load->view('vw_Servicos');
-//        $this->load->view('vw_Cad_Servicos');
-//    }
-//
-//    public function CadastraServicos()
-//    {
-//        $this-> Verifica_Sessao();
-//        $vet ['nome_prod_serv']            = $this->input->post('nome_prod_serv');
-//        $vet ['tipo_prod_serv']            = $this->input->post('tipo_prod_serv');
-//        $vet ['valor_venda_prod_serv']     = $this->input->post('valor_venda_prod_serv');
-//        $vet ['servico']                   = '1';
-//        $vet ['descricao_prod_serv']     = $this->input->post('descricao_prod_serv');
-//
-//        $this->load->model('model_Produtos_Servicos');
-//        $objModel= new model_Produtos_Servicos();
-//        $objModel->CREATE($vet);
-//        redirect('Produtos_Servicos/ListServicos');
-//    }
 
 
 
