@@ -1,7 +1,7 @@
 
 //Função de busca do valor de cada prod/serv para cadastro de itens da OS
 function busca_valor(id_prod_serv) {
-    var base_url = "http://localhost/Bass/";
+    var base_url = "http://localhost/bass/";
     $.ajax({
         type: 'POST',
         url: base_url + "Os/"+"RetornaValorUnitario",
