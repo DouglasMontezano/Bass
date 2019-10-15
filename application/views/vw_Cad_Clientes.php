@@ -1,5 +1,4 @@
-<body>
-  <div class="container container fluid ">
+  <div class="container container-fluid ">
     <br><br>
     <div class="row">
       <div class="col-md-12 ">
@@ -7,11 +6,11 @@
         <caption>* Campos Obrigatórios</caption>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-md-12 ">
-        <?php echo validation_errors(); ?>
-        <form class="form control " action="<?=base_url()?>Clientes/CadastraClientes" method="post" rule="form">
+    <form class="form control" action="<?=base_url()?>Clientes/CadastraClientes" method="post" rule="form">
+      <div class="row">
+        <div class="col-md-12 ">
+          <?php echo validation_errors(); ?>
+          <!-- <form class="form control " action="<?=base_url()?>Clientes/CadastraClientes" method="post" rule="form"> -->
           <div class="row">
             <div class="col-md-6 ">
               <label for="nome">Nome: *</label>
@@ -76,26 +75,15 @@
             </div>
           </div>
           <br>
-      	</div>
-			</div>
-      <br>
-      <div clas="row">
+        </div>
+      </div>
+      <br>			      
         <div class="col-md-4 form-check">
           <input class="form-check-input" name="desativado" type="checkbox" value="1" unchecked>
           <label class="form-check-label">Desativado </label>
-        </div>
-      </div>
-			<div clas="row">
+        </div>     
         <br>
         <button type="submit" class="btn btn-success" name="salvar"> Salvar </button>
-        <button type="reset" class=" btn btn-warning" name="limpar"> Limpar </button>
-      </div>
-    
-  </div>
-
-  </div>
-  </form>
-  </div>
-  </div>
-  </div>
+        <button type="reset" class=" btn btn-warning" name="limpar"> Limpar </button>      
+    </form>
 </body>
