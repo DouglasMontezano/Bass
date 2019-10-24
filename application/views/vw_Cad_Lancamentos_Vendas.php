@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <form class="form control " action="<?= base_url()?>Lancamentos/CadastraLancamento" method="post">
+    <form class="form control" action="<?= base_url()?>Lancamentos/CadastraLancamento" method="post">
         <div class="row">
             
             <input type="hidden" name="situacao_venda" id="situacao_venda" value="<?php echo $situacao_venda?>"></input>

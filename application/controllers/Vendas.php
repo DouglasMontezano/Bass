@@ -64,7 +64,6 @@ class Vendas extends CI_Controller
         $this->Verifica_Sessao();
         $this->template->load("layouts/lay_pattern", "vw_Vendas");
         $this->load->model('model_Vendas');
-
         $objModel = new model_Vendas();
         $vet = $objModel->GETBYID($id);
 
@@ -227,7 +226,8 @@ class Vendas extends CI_Controller
         $vet['tipo_lancamento'] = 'Receita';
         $vet['subtipo_lancamnto'] = 'Venda';
         $vet['situacao_venda'] = 'Concluída';
-        $this->load->view('vw_Lancamentos');
+        $this->template->load("layouts/lay_pattern", "vw_Lancamentos");
+        // $this->load->view('vw_Lancamentos');
         $this->load->view('vw_Cad_Lancamentos_Vendas', $vet);
     }
 

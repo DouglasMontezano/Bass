@@ -3,8 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Lancamentos extends CI_Controller
 {
-
-
     public function Verifica_Sessao()
     {
         if ($this->session->userdata('logado') == false) {
@@ -42,16 +40,13 @@ class Lancamentos extends CI_Controller
     public function CadastraLancamento()
     {
         $this->Verifica_Sessao();
-
         if (!empty($this->input->post('id_os'))) {
             $vet['id_os'] = $this->input->post('id_os');
             $id_os = $this->input->post('id_os');
             $vet2['situacao'] = $this->input->post('situacao_os');
-
         } else {
             $vet['id_os'] = null;
         }
-
         if (!empty($this->input->post('id_venda'))) {
             $vet['id_venda'] = $this->input->post('id_venda');
             $id_venda = $this->input->post('id_venda');
@@ -65,7 +60,6 @@ class Lancamentos extends CI_Controller
         } else {
             $vet['id_fornecedor'] = null;
         }
-
         $vet['tipo_lancamento'] = $this->input->post('tipo_lancamento');
         $vet['numero_doc_lancamento'] = $this->input->post('numero_doc_lancamento');
         $vet['subtipo_lancamento'] = $this->input->post('subtipo_lancamento');
@@ -187,6 +181,3 @@ class Lancamentos extends CI_Controller
 
 
 }
-
-
-

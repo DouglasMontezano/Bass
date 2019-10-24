@@ -1,23 +1,24 @@
        <div class="container fluid ">
+         <br><br>
          <div class="row">
            <div class="col-md-12 ">
-             <h2>Novo Produto</h2><br>
+             <h5>Novo Produto</h5>
              <caption>* Campos Obrigatórios</caption><br><br>
            </div>
          </div>
          <form class="form control " action="<?= base_url()?>Produtos_Servicos/CadastraProdutos" method="post">
            <div class="row">
-             <div class="col-md-4 ">
+             <div class="col-md-6 ">
                <label for="nome_prod">Nome: *</label>
                <input type="text" class="form-control" id="nome_prod_serv" name="nome_prod_serv"
                  placeholder="Informe o nome do produto" required></input>
              </div>
-             <div class="col-md-3">
+             <div class="col-md-4">
                <label for="tipo_prod">Tipo:</label>
                <input type="text" class="form-control" id="tipo_prod_serv" name="tipo_prod_serv"
                  placeholder="Tipo de produto"></input>
              </div>
-             <div class="col-md-3">
+             <div class="col-md-2">
                <label for="text">Marca: *</label>
                <input type="text" class="form-control" id="marca_prod_serv" name="marca_prod_serv"
                  placeholder="Marca do produto" required></input>

@@ -30,7 +30,7 @@
           </div>
           <br>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-2">
               <label for="email">E-mail: *</label>
               <input type="email" class="form-control" id="email_cliente" name="email_cliente"
                 placeholder="E-mail do cliente" required="Campo Obrigatório"></input>
@@ -45,7 +45,7 @@
               <input type="text" class="form-control" id="rg_cliente" name="rg_cliente"
                 placeholder="RG do cliente"></input>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
               <label for="endereco">Endereço:</label>
               <input type="text" class="form-control" id="endereco_cliente" name="endereco_cliente"
                 placeholder="Endereço do cliente"></input>
