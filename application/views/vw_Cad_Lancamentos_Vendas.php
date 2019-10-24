@@ -11,7 +11,7 @@
     <form class="form control" action="<?= base_url()?>Lancamentos/CadastraLancamento" method="post">
         <div class="row">
             
-            <input type="hidden" name="situacao_venda" id="situacao_venda" value="<?php echo $situacao_venda?>"></input>
+            <input type="hidden" name="situacao_venda" id="situacao_venda" value="<?php echo $situacao_venda?>">
 
             <div class="col-md-2 ">
                 <label for="tipo_lancamento">Tipo Lançamento:</label>
@@ -27,11 +27,11 @@
 
             <div class="col-md-2">
                 <label for="id_os">Codigo O.S:</label>
-                <input disabled type="text" class="form-control" id="id_os" name="id_os"   placeholder="Código da O.S" ></input>
+                <input disabled type="text" class="form-control" id="id_os" name="id_os"   placeholder="Código da O.S" >
             </div>
             <div class="col-md-2">
                 <label for="id_venda">Codigo Venda:</label>
-                <input type="text" class="form-control" id="id_venda" name="id_venda"  placeholder="Código da venda" value="<?= $cod_venda;?>"></input>
+                <input type="text" class="form-control" id="id_venda" name="id_venda"  placeholder="Código da venda" value="<?= $cod_venda;?>">
             </div>
             <div class="col-md-2 ">
                 <div class="form-group">
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-3">
                 <label for="numero_doc_lancamento">Número Documento:</label>
-                <input disabled type="text" class="form-control" id="numero_doc_lancamento" name="numero_doc_lancamento"  placeholder="Número Documento" ></input>
+                <input disabled type="text" class="form-control" id="numero_doc_lancamento" name="numero_doc_lancamento"  placeholder="Número Documento" >
             </div>
 
         </div>
@@ -69,13 +69,13 @@
                 <label for="data_lancamento">Data Lançamento: *</label>
                 <input type="text" class="form-control" id="data_lancamento" name="data_lancamento"
                        placeholder="00/00/0000" requered value="<?= date('d/m/Y');?>">
-                </input>
+                
             </div>
 
             <div class="col-md-2">
                 <label for="data_vencimento_lancamento">Data Vencimento: *</label>
                 <input type="date" class="form-control" id="data_vencimento_lancamento" name="data_vencimento_lancamento"
-                       placeholder="00/00/0000" requered  ></input>
+                       placeholder="00/00/0000" requered  >
             </div>
             <div class="col-md-2">
                 <label for="valor_lancamento">Valor:</label>

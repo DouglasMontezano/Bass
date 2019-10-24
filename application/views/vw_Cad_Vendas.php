@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
     <div class="container container-fluid">
+    <br><br>
         <div class="row">
             <div class= "col-md-12 ">
-                <h2 >Nova Venda </h2><br>
+                <h3 >Nova Venda </h3><br>
             </div>
         </div>
         <br>

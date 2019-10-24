@@ -2,8 +2,8 @@
          <br><br>
          <div class="row">
            <div class="col-md-12 ">
-             <h5>Novo Produto</h5>
-             <caption>* Campos Obrigatórios</caption><br><br>
+             <h3>Novo Produto</h3>
+             <!-- <caption>* Campos Obrigatórios</caption><br><br> -->
            </div>
          </div>
          <form class="form control " action="<?= base_url()?>Produtos_Servicos/CadastraProdutos" method="post">
@@ -28,8 +28,8 @@
            <div class="row">
              <div class="col-md-2">
                <label for="quant_prod">Quantidade em Estoque: *</label>
-               <input type="number" class="form-control" id="qtd_estoque_prod_serv" name="qtd_estoque_prod_serv"
-                 placeholder="Quantidade " required></input>
+               <input type="number" class="form-control" id="qtd_estoque_prod_serv" name="qtd_estoque_prod_serv"placeholder="Quantidade " required>
+              
              </div>
              <div class="col-md-2">
                <label for="valor_prod">Valor de Venda: </label>
@@ -49,10 +49,14 @@
            </div>
            <br>
            <div class="row">
-             <div class="col-md-12  ">
+             <div class="col-md-6">
                <button type="submit" class="btn btn-success" name="salvar"> Salvar</button>
                <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
+               <caption>* Campos Obrigatórios</caption>
              </div>
+              <div class="col-md-6">
+              
+              </div>
            </div>
          </form>
        </div>

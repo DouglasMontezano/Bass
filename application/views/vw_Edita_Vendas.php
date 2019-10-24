@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <div class="container container-fluid">
+<br><br>
   <div class="row">
     <div class="col-md-12 ">
-      <h2>Editar Venda</h2><br>
+      <h3>Editar Venda</h3><br>
     </div>
     <br>
   </div>
@@ -38,8 +39,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="row">
       <div class="col-md-4">
         <label for="situacao">Tipo de Venda:</label>
@@ -53,12 +52,12 @@
       <div class="col-md-4">
         <label for="data_venda">Data Venda:</label>
         <input type="text" class="form-control" id="data_venda" name="data_venda" placeholder="Data da Venda"
-          value="<?=date('d/m/Y',strtotime($vendas[0]->data_venda));?>" required></input>
+          value="<?=date('d/m/Y',strtotime($vendas[0]->data_venda));?>" required>
       </div>
       <div class="col-md-3">
         <label for="hora_venda">Hora Venda:</label>
         <input type="text" class="form-control" id="hora_venda" name="hora_venda" placeholder="Hora da Venda"
-          value="<?=date('H:i',strtotime($vendas[0]->data_venda));?>" required></input>
+          value="<?=date('H:i',strtotime($vendas[0]->data_venda));?>" required>
       </div>
       <br>
     </div>
