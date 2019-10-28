@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container container-fluid">
   <div class="col-md-12">
     <br>
-    <caption> Listando Ordens de serviço</caption><br>
+    <caption> Listando Ordens de serviço</caption>
+    <br>
     <table class=" table table-striped table-dark table-bordered table-hover ">
       <thead>
         <tr>

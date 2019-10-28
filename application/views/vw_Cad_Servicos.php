@@ -1,11 +1,11 @@
-<div class="container fluid ">
+<div class="container container-fluid ">
   <br>
   <div class="row">
-    <div class="col-md-12 ">
-      <br>
-      <h5>Novo Serviço</h5>
+    <div class="col-md-12">      
+      <h3>Novo Serviço</h3>
     </div>
   </div>
+  <br>
   <form class="form control " action="<?= base_url()?>Produtos_Servicos/CadastraServicos" method="post">
     <div class="row">
       <div class="col-md-6">
@@ -23,13 +23,15 @@
         <input type="text" class="form-control" id="valor_venda_prod_serv" name="valor_venda_prod_serv"
           placeholder="Ex: R$ 1560.80" required></input>
       </div>
+    </div>
+    <br>
+    <div class="row">
       <div class="col-md-12">
         <label for="descricao_prod_serv">Descrição </label>
         <textarea rows="3" cols="50" class="form-control" name="descricao_prod_serv"
           value="descricao_prod_serv"></textarea>
       </div>
-    </div>
-    <br>
+    </div>    
     <br>
     <div class="row">
       <div class="col-md-12  ">

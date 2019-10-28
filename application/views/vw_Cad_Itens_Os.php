@@ -8,7 +8,7 @@
       </div>
       <form class="form control " action="<?= base_url()?>Os/CadastraItensOs" method="post">
         <div class="row">
-          <input type="hidden" name="id_os" id="id_os" value="<?php echo $id_os;?>"> </input>
+          <input type="hidden" name="id_os" id="id_os" value="<?php echo $id_os;?>">
           <div class="col-md-6 ">
             <div class="form-group">
               <label for="prodserv">Produtos / Serviços:</label>
@@ -22,19 +22,19 @@
           </div>
           <div class="col-md-2">
             <label for="qtd">Quantidade:</label>
-            <input type="text" class="form-control soma" id="qtd" name="qtd" placeholder="Quantidade" required></input>
+            <input type="text" class="form-control soma" id="qtd" name="qtd" placeholder="Quantidade" required>
           </div>
 
           <div class="col-md-2">
             <label for="valorunit">Valor Unitário:</label>
             <input type="text" class="form-control soma" id="valorunit" name="valorunit" value=""
-              placeholder="Valor Unitário" required></input>
+              placeholder="Valor Unitário" required>
           </div>
 
           <div class="col-md-2">
             <label for="desc">Desconto:</label>
             <input type="text" class="form-control soma" id="desc" name="desc" placeholder="Desconto Unitário"
-              required></input>
+              required>
           </div>
         </div>
         <br>
