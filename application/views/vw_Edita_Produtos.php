@@ -17,7 +17,7 @@
               placeholder="código da OS" value="<?=$produtos[0]->id_prod_serv;?>">
           </div>
           <div class="col-md-4 ">
-            <label for="nome_prod">Nome:</label>
+            <label for="nome_prod">Nome: *</label>
             <input type="text" class="form-control" id="nome_prod_serv" name="nome_prod_serv"
               placeholder="Informe o nome do produto" required value="<?=$produtos[0]->nome_prod_serv;?>" required>
           </div>
@@ -27,7 +27,7 @@
               placeholder="Tipo de Produto" value="<?=$produtos[0]->tipo_prod_serv;?>" required>
           </div>
           <div class="col-md-3">
-            <label for="text">Marca:</label>
+            <label for="text">Marca: *</label>
             <input type="text" class="form-control" id="marca_prod_serv" name="marca_prod_serv"
               placeholder="Marca do Produto" value="<?=$produtos[0]->marca_prod_serv;?>" required>
           </div>
@@ -35,7 +35,7 @@
         <br>
         <div class="row">
           <div class="col-md-2">
-            <label for="quant_prod">Quantidade em Estoque:</label>
+            <label for="quant_prod">Quantidade em Estoque: *</label>
             <input type="text" class="form-control" id="qtd_estoque_prod_serv" name="qtd_estoque_prod_serv"
               placeholder="Quantidade " value="<?=$produtos[0]->qtd_estoque_prod_serv;?>" required>
           </div>
@@ -45,7 +45,7 @@
               placeholder="Valor de venda do produto" value="<?=$produtos[0]->valor_venda_prod_serv;?>" required>
           </div>
           <div class="col-md-2">
-            <label for="data_compra_prod_serv">Data da Compra:</label>
+            <label for="data_compra_prod_serv">Data da Compra: *</label>
             <input type="text" class="form-control" id="data_compra_prod_serv" name="data_compra_prod_serv"
               value="<?=date('d/m/Y',strtotime($produtos[0]->data_compra_prod_serv));?>">
           </div>
