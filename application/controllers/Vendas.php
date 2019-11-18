@@ -227,7 +227,6 @@ class Vendas extends CI_Controller
         $vet['subtipo_lancamnto'] = 'Venda';
         $vet['situacao_venda'] = 'Concluída';
         $this->template->load("layouts/lay_pattern", "vw_Lancamentos");
-        // $this->load->view('vw_Lancamentos');
         $this->load->view('vw_Cad_Lancamentos_Vendas', $vet);
     }
 

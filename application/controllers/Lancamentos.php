@@ -110,21 +110,17 @@ class Lancamentos extends CI_Controller
             $vet['id_os'] = $this->input->post('id_os');
             $id_os = $this->input->post('id_os');
             $vet2['situacao'] = 'Concluída';
-
         } else {
             $vet['id_os'] = null;
         }
-
         if (!empty($this->input->post('id_venda'))) {
             $vet['id_venda'] = $this->input->post('id_venda');
             $id_venda = $this->input->post('id_venda');
             $vet2['valor_tot_venda'] = $this->input->post('valor_lancamento');
             $vet2['situacao_venda'] = 'Concluída';
-
         } else {
             $vet['id_venda'] = null;
         }
-
         if (!empty($this->input->post('id_fornecedor'))) {
             $vet['id_fornecedor'] = $this->input->post('id_fornecedor');
         } else {
