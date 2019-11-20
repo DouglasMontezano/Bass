@@ -46,16 +46,16 @@
         <label for="data_vencimento_lancamento">Data Vencimento: *</label>
         <input type="date" class="form-control" id="data_vencimento_lancamento" name="data_vencimento_lancamento"
           placeholder="00/00/0000" requered>
-      </div>      
+      </div>
 
-      <div class="col-md-4"> 
+      <div class="col-md-4">
         <label for="valor_lancamento">Valor:</label>
         <div class="input-group">
-          <div class="input-group-prepend">        
+          <div class="input-group-prepend">
             <span class="input-group-text">R$</span>
           </div>
           <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="valor_lancamento"
-            id="valor_lancamento" placeholder="Valor Lançamento" value="<?=$valor_tot_venda;?>" required>        
+            id="valor_lancamento" placeholder="Valor Lançamento" value="<?=$valor_tot_venda;?>" required>
         </div>
       </div>
       <div class="col-md-3">
@@ -90,30 +90,42 @@
           </select>
         </div>
       </div>
-
       <div class="col-md-2">
         <label for="tipo_lancamento">Tipo Lançamento:</label>
         <div class="radio">
-          <label><input disabled type="radio" name="tipo_lancamento" value="Despesa">Despesa</label>          
-          <label><input type="radio" name="tipo_lancamento" value="Receita"
-              <?php echo ($tipo_lancamento == "Receita") ? "checked" : null; ?> />Receita
-          </label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input disabled type="radio" name="tipo_lancamento" value="Despesa" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Despesa</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" name="tipo_lancamento" value="Receita"<?php echo ($tipo_lancamento == "Receita") ? "checked" : null; ?> class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Receita</label>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <label for="subtipo_lancamento">Sub-Tipo Lançamento:</label>
         <div class="radio">
-          <label><input disabled type="radio" name="subtipo_lancamento" value="O.S">O.S</label>          
-          <label><input type="radio" name="subtipo_lancamento" value="Venda"
-              <?php echo ($subtipo_lancamnto == "Venda") ? "checked" : null; ?> />Vendas</label>          
-          <label><input disabled type="radio" name="subtipo_lancamento" value="Fornecedor">Fornecedores</label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input disabled type="radio" name="subtipo_lancamento" value="O.S" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">O.S</label>
+          </div>
+
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" name="subtipo_lancamento" value="Venda"
+              <?php echo ($subtipo_lancamnto == "Venda") ? "checked" : null; ?> class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Vendas</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input disabled type="radio" name="subtipo_lancamento" value="Fornecedor" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Fornecedores</label>
+          </div>
         </div>
       </div>
     </div>
     <br>
-    <br>
-    <div class="row">   
-    <div class="col-md-12">         
+    <div class="row">
+      <div class="col-md-12">
         <button type="submit" class="btn btn-success" name="salvar"> Salvar</button>
         <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
       </div>
