@@ -1,4 +1,4 @@
-<div class="container container fluid ">
+<div class="container container-fluid ">
   <div class="row">
     <div class="col-md-12 ">
       <br>
@@ -10,11 +10,12 @@
     <div class="row">
       <div class="col-md-2">
         <label for="id_os">Codigo O.S:</label>
-        <input type="text" class="form-control" id="id_os" name="id_os" placeholder="Código da O.S"></input>
+        <input disabled type="text" class="form-control" id="id_os" name="id_os" placeholder="Código da O.S"></input>
       </div>
       <div class="col-md-2">
         <label for="id_venda">Codigo Venda:</label>
-        <input type="text" class="form-control" id="id_venda" name="id_venda" placeholder="Código da venda"></input>
+        <input disabled type="text" class="form-control" id="id_venda" name="id_venda"
+          placeholder="Código da venda"></input>
       </div>
       <div class="col-md-4">
         <div class="form-group">
@@ -91,20 +92,41 @@
       <div class="col-md-2">
         <label for="tipo_lancamento">Tipo Lançamento:</label>
         <div class="radio">
-          <label><input type="radio" name="tipo_lancamento" value="Despesa">Despesa</label>
-          <label><input type="radio" name="tipo_lancamento" value="Receita">Receita</label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <!-- <input type="radio" name="tipo_lancamento" id="customRadioInline1" value="Despesa" class="custom-control-input">           -->
+            <input type="radio" name="customRadioInline1" id="customRadioInline1" value="Despesa"
+              class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">Despesa</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <!-- <input type="radio" name="tipo_lancamento" id="customRadioInline2" value="Receita" class="custom-control-input"> -->
+            <input type="radio" name="customRadioInline1" id="customRadioInline2" value="Receita"
+              class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline2">Receita</label>
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <label for="subtipo_lancamento">Sub-Tipo Lançamento:</label>
         <div class="radio">
-          <label><input disabled type="radio" name="subtipo_lancamento" value="OS">O.S</label>
-          <label><input disabled type="radio" name="subtipo_lancamento" value="VENDA">Vendas</label>
-          <label><input type="radio" name="subtipo_lancamento" value="FORNECEDOR">Fornecedores</label>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" name="customRadioInline3" id="customRadioInline3" value="O.S"
+              class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline3">O.S</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" name="customRadioInline3" id="customRadioInline4" value="Venda"
+              class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline4">Vendas</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" name="customRadioInline3" id="customRadioInline5" value="Fornecedor"
+              class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline5">Fornecedores</label>
+          </div>
         </div>
       </div>
     </div>
-    <br>
     <br>
     <div class="row">
       <div class="col-md-12">

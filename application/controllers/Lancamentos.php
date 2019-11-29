@@ -171,9 +171,4 @@ class Lancamentos extends CI_Controller
         $this->load->view('vw_Lista_Lancamentos', array('resultado' => $retorno));
     }
 
-
-
-
-
-
 }

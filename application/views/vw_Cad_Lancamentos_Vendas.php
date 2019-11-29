@@ -90,6 +90,7 @@
           </select>
         </div>
       </div>
+      
       <div class="col-md-2">
         <label for="tipo_lancamento">Tipo Lançamento:</label>
         <div class="radio">
@@ -110,7 +111,6 @@
             <input disabled type="radio" name="subtipo_lancamento" value="O.S" class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline1">O.S</label>
           </div>
-
           <div class="custom-control custom-radio custom-control-inline">
             <input type="radio" name="subtipo_lancamento" value="Venda"
               <?php echo ($subtipo_lancamnto == "Venda") ? "checked" : null; ?> class="custom-control-input">
