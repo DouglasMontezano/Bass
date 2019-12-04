@@ -137,9 +137,10 @@ class Os extends CI_Controller
         //Busca itens dessa OS
         $this->load->model('model_Os');
         $objModel = new model_Os();
-        $retorno = $objModel->GETALLITENSOS($id);       
+        $retorno = $objModel->GETALLITENSOS($id);   
+            
         $this->template->load("layouts/lay_pattern", "vw_Os"); 
-        //Carrega a vw_DadosPdv_Os
+        //Carrega a vw_DadosPdv_Os com dados do banco caso existam algum já cadastrado.
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $vet = $objModel->GETBYID($id);
