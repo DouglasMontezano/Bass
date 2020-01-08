@@ -92,14 +92,12 @@
       <div class="col-md-2">
         <label for="tipo_lancamento">Tipo Lançamento:</label>
         <div class="radio">
-          <div class="custom-control custom-radio custom-control-inline">
-            <!-- <input type="radio" name="tipo_lancamento" id="customRadioInline1" value="Despesa" class="custom-control-input">           -->
+          <div class="custom-control custom-radio custom-control-inline">            
             <input type="radio" name="customRadioInline1" id="customRadioInline1" value="Despesa"
               class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline1">Despesa</label>
           </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <!-- <input type="radio" name="tipo_lancamento" id="customRadioInline2" value="Receita" class="custom-control-input"> -->
+          <div class="custom-control custom-radio custom-control-inline">          
             <input type="radio" name="customRadioInline1" id="customRadioInline2" value="Receita"
               class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline2">Receita</label>
@@ -110,17 +108,17 @@
         <label for="subtipo_lancamento">Sub-Tipo Lançamento:</label>
         <div class="radio">
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="customRadioInline3" id="customRadioInline3" value="O.S"
+            <input type="radio" name="customRadioInline3" id="customRadioInline3" disabled  value="O.S"
               class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline3">O.S</label>
           </div>
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="customRadioInline3" id="customRadioInline4" value="Venda"
+            <input type="radio" name="customRadioInline3" id="customRadioInline4" disabled value="Venda"
               class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline4">Vendas</label>
           </div>
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="customRadioInline3" id="customRadioInline5" value="Fornecedor"
+            <input type="radio" name="customRadioInline3" id="customRadioInline5" checked value="Fornecedor"
               class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline5">Fornecedores</label>
           </div>

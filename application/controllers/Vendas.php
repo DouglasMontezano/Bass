@@ -16,7 +16,7 @@ class Vendas extends CI_Controller
         $this->Verifica_Sessao();
         $this->ListVendas();
     }
- //Função que lista as Vendas
+    //Função que lista as Vendas
     public function ListVendas()
     {
         $this->Verifica_Sessao();
@@ -72,11 +72,8 @@ class Vendas extends CI_Controller
 
         $objModel3 = new model_Vendas();
         $vet3 = $objModel3->GETFUNC();
-
         $this->load->view('vw_Edita_Vendas', array_merge(array('vendas' => $vet), array('clientes' => $vet2), array('funcionarios' => $vet3)));
-
     }
-
     // Funcao  para salvar o form de edição
     public function SalvarEditVendas()
     {
@@ -106,9 +103,6 @@ class Vendas extends CI_Controller
         $retorno = $objModel->GetForVendas($busca);
         $this->load->view('vw_Lista_Vendas', array('resultado' => $retorno));
     }
-
-   
-
     // função que exclui Vendas
     public function ExcVendas($id = null)
     {
@@ -127,7 +121,7 @@ class Vendas extends CI_Controller
         $this->load->model('model_Vendas');
         $objModel = new model_Vendas();
         //criando um elemento do array com a $id e recebendo na variável $data1
-        $data1 = array('id_venda' => "$id", );
+        $data1 = array('id_venda' => "$id");
         // recebendo o array de todos produtos/serviços vindo do banco.
         $data2['prodserv'] = $objModel->GETPRODSERV();
         //unindo os dois arrays para enviar para vw_Cad_Itens_Vendas
@@ -144,15 +138,15 @@ class Vendas extends CI_Controller
         $retorno = $objModel->GETALLITENSVENDAS($id);
         //join em funcionario, clientes de determinada venda, que carrega .. vw_DadosPdv_Vendas.
         $retorno2 = $objModel->GETBYID($id);
-        
-       //verifico se existe um lançamento desta venda e mando no array
+
+        //verifico se existe um lançamento desta venda e mando no array
         $this->load->model('model_Lancamentos');
         $objModel2 = new model_Lancamentos();
         // retorna o numero de registros de vendas lançadas...
         $retorno3 = $objModel2->SELECT_EXIST_VENDA($id);
         // retorna o codigo de lancamento da venda.....
         $retorna_cod_lancamento = $objModel2->GET_COD_LANCAMENTO($id);
-        
+
         // if caso seja uma nova venda não mostrar duas vezes o painel vendas..provisório definitivo :) .
         if ($id !== 0) {
             $this->template->load("layouts/lay_pattern", "vw_Vendas");
@@ -160,13 +154,13 @@ class Vendas extends CI_Controller
         // Se a variável $retorno for vazia, ou seja a VENDA não ter itens, irá cadastrar itens no primeiro momento, se já tiver itens,
         // o sistema mostrará os dados da venda com a listagem dos itens.
         if (empty($retorno)) {
-            $data1 = array('id_venda' => "$id", );
+            $data1 = array('id_venda' => "$id");
             $data2['prodserv'] = $objModel->GETPRODSERV();
             $this->load->view('vw_Cad_Itens_Vendas', array_merge($data1, $data2));
         } else {
-            $this->load->view('vw_DadosPdv_Vendas', array('vendas' => $retorno2));            
+            $this->load->view('vw_DadosPdv_Vendas', array('vendas' => $retorno2));
             $this->load->view('vw_Lista_Itens_Vendas', array_merge(array('existvenda' => $retorno3))
-                + (array('resultado' => $retorno)) + (array('cod_lancamento' => $retorna_cod_lancamento)));
+                 + (array('resultado' => $retorno)) + (array('cod_lancamento' => $retorna_cod_lancamento)));
         }
     }
 
@@ -174,7 +168,7 @@ class Vendas extends CI_Controller
     public function CadastraItensVendas()
     {
         $this->Verifica_Sessao();
-        //se ja existir uma venda a função cadastra os itens com o id findo do formulário normalmente, pois ja terá uma venda cadastradaj
+        //se ja existir uma venda, a função cadastra os itens com o id vindo do formulário normalmente, pois ja terá uma venda cadastrada
         $id_venda = $this->input->post('id_venda');
         $vet['id_venda'] = $this->input->post('id_venda');
         $vet['id_prod_serv'] = $this->input->post('prodserv');
@@ -186,7 +180,7 @@ class Vendas extends CI_Controller
         //cria o item de venda.
         $this->load->model('model_Vendas');
         $objModel = new model_Vendas();
-        $objModel->CREATE_ITEM_VENDAS($vet);      
+        $objModel->CREATE_ITEM_VENDAS($vet);
         //Busca o valor total da venda em questão soma ao valor total do item e atualiza na tabela vendas
         $valor_tot_venda = $objModel->GET_VAL_TOT_VENDA($id_venda);
         $valor_tot_venda = $valor_tot_venda[0]->valor_tot_venda + $aux;
@@ -194,7 +188,7 @@ class Vendas extends CI_Controller
         $this->ListProdServ($id_venda);
     }
     //vendas esta usando o mesmo ajax para carregar o FormCadastraItens....por isso o ajax busca originalmente pelo método no controller
-    // da O.S--->esta função abaixo não esta sendo usada, mas é igual a do controller OS... :)
+    // da O.S---> esta função abaixo não esta sendo usada, mas é igual a do controller OS... :)
     public function RetornaValorUnitario()
     {
         $this->Verifica_Sessao();
