@@ -1,14 +1,7 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-<<<<<<< HEAD
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-=======
-    // Passe o mouse para ver as descrições dos atributos existentes.
-    // Para obter mais informações, visite: https://go.microsoft.com/fwlink/?linkid=830387
->>>>>>> 5ef1f2516f7e5cdb5f99304a3344dbebc839f9b7
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Listen for XDebug",
             "type": "php",

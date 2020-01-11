@@ -3,18 +3,20 @@
   <div class="row">
     <div class="col-md-12 ">
       <h2>Editar Lançamento N° <?php echo ($lancamento[0]->id_lancamento)?> </h2><br>
-      <caption>* Campos Obrigatórios</caption><br><br>
+      <caption>* Campos Obrigatórios</caption><br>
     </div>
   </div>
   <form class="form control " action="<?= base_url()?>Lancamentos/SalvarEditLancamentos" method="post">
     <div class="row">
       <div class="col-md-2">
-        <label for="id_os">Codigo O.S:</label>
-        <input type="text" class="form-control" id="id_os" name="id_os" value="<?=$lancamento[0]->id_os;?>"></input>
+        <label for="id_os">Codigo O.S:</label>   
+<!-- Busca no array se existe uma OS caso exista é mostrado na caixa caso não exista não mostra nada e desabilita a caixa de texto // E SIM, isso deveria estar em outra camada -->
+        <input type="text" class="form-control" id="id_os" name="id_os" <?php echo (!empty($lancamento[0]->id_os)? : null."disabled" );?> value= "<?=$lancamento[0]->id_os;?>" > 
       </div>
       <div class="col-md-2">
-        <label for="id_venda">Codigo Venda:</label>
-        <input type="text" class="form-control" id="id_venda" name="id_venda" value="<?=$lancamento[0]->id_venda;?>">
+        <label for="id_venda">Codigo Venda:</label>   
+<!-- Busca no array se existe uma Vendacaso exista é mostrado na caixa caso não exista não mostra nada e desabilita a caixa de texto // E SIM, isso deveria estar em outra camada -->     
+        <input type="text" class="form-control" id="id_venda" name="id_venda" <?php echo (!empty($lancamento[0]->id_venda)? : null."disabled" );?> value="<?=$lancamento[0]->id_venda;?>">
         </input>
       </div>
       <div class="col-md-4">
@@ -93,58 +95,53 @@
           </select>
         </div>
       </div>
-<!--recebe o id_lancamento e envia para o update-->
-      <div class="col-md-2">        
+      <!--recebe o id_lancamento e envia para o update-->
+      <div class="col-md-2">
         <input type="hidden" name="id_lancamento" value="<?php echo ($lancamento[0]->id_lancamento); ?>" />
         <label for="tipo_lancamento">Tipo Lançamento:</label>
 
-        <div class="radio">          
+        <div class="radio">
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="tipo_lancamento" value="Despesa"
-              <?php echo ($lancamento[0]->tipo_lancamento == "Despesa") ? "checked " : null."disabled" ;?>id="customRadioInline1"
+            <input type="radio"  value="Despesa" <?php echo ($lancamento[0]->tipo_lancamento == "Despesa") ? "checked " : null."disabled" ;?>id="customRadioInline1"
               name="customRadioInline1" class="custom-control-input">
             <label class="custom-control-label" for="customRadioInline1">Despesa</label>
           </div>
-          
+
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="tipo_lancamento" value="Receita"
-              <?php echo ($lancamento[0]->tipo_lancamento == "Receita") ? "checked " : null."disabled" ;?>id="customRadioInline1"
+            <input type="radio" value="Receita" <?php echo ($lancamento[0]->tipo_lancamento == "Receita") ? "checked " : null."disabled" ;?>id="customRadioInline2"
               name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Receita</label>
+            <label class="custom-control-label" for="customRadioInline2">Receita</label>
           </div>
         </div>
-      </div>
+      </div>      
       <div class="col-md-4">
         <label for="subtipo_lancamento">Sub-Tipo Lançamento: </label>
         <div class="radio">
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="subtipo_lancamento" value="O.S"
-              <?php echo ($lancamento[0]->subtipo_lancamento == "O.S") ? "checked " : null."disabled" ;?>id="customRadioInline1"
-              name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">O.S</label>
+            <input type="radio"  value="O.S" <?php echo ($lancamento[0]->subtipo_lancamento == "O.S") ? "checked " : null."disabled" ;?>id="customRadioInline3"
+              name="customRadioInline2" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline3">O.S</label>
           </div>
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="subtipo_lancamento" value="Venda"
-              <?php echo ($lancamento[0]->subtipo_lancamento == "Venda") ? "checked " : null."disabled" ;?>id="customRadioInline1"
-              name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Venda</label>
+            <input type="radio"  value="Venda" <?php echo ($lancamento[0]->subtipo_lancamento == "Venda") ? "checked " : null."disabled" ;?>id="customRadioInline4"
+              name="customRadioInline2" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline4">Venda</label>
           </div>
           <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" name="subtipo_lancamento" value="Fornecedor"
-              <?php echo ($lancamento[0]->subtipo_lancamento == "Fornecedor") ? "checked " : null."disabled" ;?>id="customRadioInline1"
-              name="customRadioInline1" class="custom-control-input">
-            <label class="custom-control-label" for="customRadioInline1">Fornecedor</label>
+            <input type="radio"  value="Fornecedor" <?php echo ($lancamento[0]->subtipo_lancamento == "Fornecedor") ? "checked " : null."disabled" ;?>id="customRadioInline5"
+              name="customRadioInline2" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline5">Fornecedor</label>
           </div>
         </div>
       </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-success" name="salvar"> Salvar</button>
+        <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
       </div>
-      <br>
-      <div class="row">
-        <div class="col-md-12">
-          <button type="submit" class="btn btn-success" name="salvar"> Salvar</button>
-          <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
-        </div>
-      </div>
+    </div>
   </form>
 </div>
 </body>

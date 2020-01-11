@@ -4,10 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_Os extends CI_Model
 {
     /////////////////////////////////////////////////////// Insere na tabela os
-    public function CREATE($vet)
-    {
-        return $this->db->insert('os', $vet);
-    }
+    public function CREATE($vet)    {
+        $this->db->insert('os', $vet);
+        $last_id = $this->db->insert_id();        
+        return $this->$last_id;
+   }
 
     // CHAMADA PARA LISTAR__(_OS_)_INNER DE 3 TABELAS PUXANDO O CLIENTE E O FUNCIONARIO
     public function GETALL()
@@ -15,6 +16,8 @@ class Model_Os extends CI_Model
         $this->db->select('*');
         $this->db->join('clientes c', 'o.id_cliente=c.id_cliente', 'inner');
         $this->db->join('funcionarios f', 'o.id_funcionario=f.id_funcionario', 'inner');
+        // listando as OS por ordem decrescente.
+        $this->db->order_by('id_os','DESC');
         return $this->db->get('os o')->result();
     }
 
@@ -90,6 +93,8 @@ class Model_Os extends CI_Model
     public function CREATE_ITEM_OS($vet)
     {
         $this->db->insert('os_itens', $vet);
+       
+        
     }
 
     //busca o valor atual da OS e retorna para o controller
@@ -117,34 +122,3 @@ class Model_Os extends CI_Model
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
