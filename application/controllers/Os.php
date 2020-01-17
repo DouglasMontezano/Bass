@@ -50,12 +50,12 @@ class Os extends CI_Controller
         $vet['veiculo'] = $this->input->post('veiculo');
         $vet['descricao_os'] = $this->input->post('descricao');
         $this->load->model('model_Os');
-        $objModel = new model_Os();        
-        $id_os=$objModel->CREATE($vet);    
+        $objModel = new model_Os(); 
+        $id_os = 0;    
+        $id_os = $objModel->CREATE($vet);    
         // $objModel->CREATE($vet);    
         // $id_os=111;
-        redirect('Os/ListProdServ/'. "$id_os");
-       
+        redirect('Os/ListProdServ/'. "$id_os");        
         // redirect('Os/ListOs');
     }
 // Função Edita cliente-> faz um select em clientes, funcionarios e na os do id passado, junta tudo em um array e carrega a vw_Edita_Os

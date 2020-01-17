@@ -5,9 +5,12 @@ class Model_Os extends CI_Model
 {
     /////////////////////////////////////////////////////// Insere na tabela os
     public function CREATE($vet)    {
-        $this->db->insert('os', $vet);
-        $last_id = $this->db->insert_id();        
-        return $this->$last_id;
+        $this->db->trans_start();
+        $this->db->insert('os', $vet);        
+        return $this->db->insert_id(); 
+        // $last_id = $this->db->insert_id(); 
+        // return $this->$last_id;
+        $this->db->trans_complete();
    }
 
     // CHAMADA PARA LISTAR__(_OS_)_INNER DE 3 TABELAS PUXANDO O CLIENTE E O FUNCIONARIO
@@ -20,7 +23,6 @@ class Model_Os extends CI_Model
         $this->db->order_by('id_os','DESC');
         return $this->db->get('os o')->result();
     }
-
     public function GETALLITENSOS($id)
     {
         $this->db->select('*');
@@ -29,7 +31,6 @@ class Model_Os extends CI_Model
         $this->db->join('os o', 'osi.id_os = o.id_os', 'inner');
         return $this->db->get('os_itens osi')->result();
     }
-
     // Busca informações pelo ID da OS no banco para carregar (EditOs).
     public function GETBYID($id)
     {
@@ -55,21 +56,18 @@ class Model_Os extends CI_Model
     {
         return $this->db->get('produtos_servicos')->result();
     }
-
     /////////////////////////////////////////////////////// Atualiza (os).
     public function UPDATE($id, $vet)
     {
         $this->db->where('id_os', $id);
         return $this->db->update('os', $vet);
     }
-
     /////////////////////////////////////////////////////// Deleta (os).
     public function DELETE($id)
     {
         $this->db->where('id_os', $id);
         return $this->db->delete('os');
     }
-
     // Busca OS por letra ou palavra digitada no campo busca
     public function GETFOROS($busca)
     {
@@ -81,7 +79,6 @@ class Model_Os extends CI_Model
         $this->db->join('funcionarios f', 'o.id_funcionario=f.id_funcionario', 'inner');
         return $this->db->get('os o')->result();
     }
-
     // função que retorna o valor quando selecionado o combo box prod/serv
     public function retorna_valor_by_prodserv($id)
     {
@@ -92,20 +89,15 @@ class Model_Os extends CI_Model
 
     public function CREATE_ITEM_OS($vet)
     {
-        $this->db->insert('os_itens', $vet);
-       
-        
+        $this->db->insert('os_itens', $vet);   
     }
-
     //busca o valor atual da OS e retorna para o controller
     public function GET_VAL_TOT_OS($id)
     {
         $this->db->where('id_os', $id);
         $this->db->select('valor_tot_os');
         return $this->db->get('os')->result();
-
     }
-
     // funcão que vai atualizar a coluna  valor_tot_os na tabela OS.
     public function UPDATE_VAL_TOT_OS($id, $valor_tot_os)
     {
@@ -113,7 +105,6 @@ class Model_Os extends CI_Model
         $this->db->set('valor_tot_os', $valor_tot_os);
         return $this->db->update('os');
     }
-
     public function DELETE_ITEM($id_item)
     {
         $this->db->where('id_item', $id_item);
