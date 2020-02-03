@@ -1,9 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+/////////////////////////////////////////////////////// Insere na tabela os
 class Model_Os extends CI_Model
-{
-    /////////////////////////////////////////////////////// Insere na tabela os
+{    
     public function CREATE($vet)    {
         $this->db->trans_start();
         $this->db->insert('os', $vet);        
@@ -39,13 +38,11 @@ class Model_Os extends CI_Model
         $this->db->where('id_os', $id);
         return $this->db->get('os o')->result();
     }
-
     // Busca lista de clientes para carregar o dropdow na (vw_Cad_Os).
     public function GETCLI()
     {
         return $this->db->get('clientes')->result();
     }
-
     // Busca lista de funcionarios para carregar o dropdow na (vw_Cad_Os).
     public function GETFUNC()
     {

@@ -52,9 +52,7 @@ class Os extends CI_Controller
         $this->load->model('model_Os');
         $objModel = new model_Os(); 
         $id_os = 0;    
-        $id_os = $objModel->CREATE($vet);    
-        // $objModel->CREATE($vet);    
-        // $id_os=111;
+        $id_os = $objModel->CREATE($vet);        
         redirect('Os/ListProdServ/'. "$id_os");        
         // redirect('Os/ListOs');
     }
@@ -121,8 +119,7 @@ class Os extends CI_Controller
 // função que carrega o numero da OS e a lista de produtos/serviços para a view vw_Cad_Itens_Os
     public function FormCadItensOs($id)
     {
-        $this->Verifica_Sessao();
-        // $this->load->view('vw_Os');
+        $this->Verifica_Sessao();       
         $this->template->load("layouts/lay_pattern", "vw_Os");
         $this->load->model('model_Os');
         $objModel = new model_Os();
@@ -134,19 +131,18 @@ class Os extends CI_Controller
         $this->load->view('vw_Cad_Itens_Os', array_merge($data1, $data2));
     }
 
-// Função de listagem de Produtos e serviços de uma OS
-    public function ListProdServ($id = null)
-   {
-        $this->Verifica_Sessao();        
 
+
+// Função de listagem de Produtos e serviços de uma OS
+    public function ListProdServ($id=null)
+    {
+        $this->Verifica_Sessao(); 
         //Busca produtos/serviços dessa OS e armazena na variável $retorno
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $retorno = $objModel->GETALLITENSOS($id);
-
         // Exibe o menu superior vw_Os
         $this->template->load("layouts/lay_pattern", "vw_Os");
-
         //Busca dados para a  vw_DadosPdv_Os         
         $this->load->model('model_Os');
         $objModel = new model_Os();
@@ -157,17 +153,15 @@ class Os extends CI_Controller
         // busca os funcionários
         $objModel3 = new model_Os();
         $vet3 = $objModel3->GETFUNC();
-
         //verifico se existe um lançamento desta os e manda no array
         $this->load->model('model_Lancamentos');
         $objModel4 = new model_Lancamentos();
         $retorno4 = $objModel4->SELECT_EXIST_Os($id);
-
         // retorna o codigo de lancamento.....
         $retorna_cod_lancamento = $objModel4->GET_COD_LANCAMENTO_OS($id);
 
-        // Se a variável $retorno for vazia, ou seja a O.S não ter itens, irá cadastrar itens no primeiro momento, se já tiver itens,
-        // o sistema mostrará os dados da O.S com a listagem dos itens.
+        /* Se a variável $retorno for vazia, ou seja a O.S não ter itens, irá cadastrar itens no primeiro momento, se já tiver itens,
+           o sistema mostrará os dados da O.S com a listagem dos itens.*/
         if (empty($retorno)) {
             $data1 = array('id_os' => "$id");
             // carrego produtos e serviços para o dropdown
@@ -196,8 +190,10 @@ class Os extends CI_Controller
         $objModel = new model_Os();
         $objModel->CREATE_ITEM_OS($vet);
         //Busca o valor total da os em questão soma ao valor total do item e atualiza na tabela OS.
-        $valor_tot_os = $objModel->GET_VAL_TOT_OS($id_os);
-        $valor_tot_os = $valor_tot_os[0]->valor_tot_os + $aux;
+        $valor_tot_os = $objModel->GET_VAL_TOT_OS($id_os);     
+             
+        $valor_tot_os = $valor_tot_os[0]->valor_tot_os + $aux;    
+
         $objModel->UPDATE_VAL_TOT_OS($id_os, $valor_tot_os);
         $this->ListProdServ($id_os);
     }
