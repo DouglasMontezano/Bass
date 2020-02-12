@@ -189,10 +189,10 @@ class Os extends CI_Controller
         $this->load->model('model_Os');
         $objModel = new model_Os();
         $objModel->CREATE_ITEM_OS($vet);
+
         //Busca o valor total da os em questão soma ao valor total do item e atualiza na tabela OS.
         $valor_tot_os = $objModel->GET_VAL_TOT_OS($id_os);                  
-        $valor_tot_os = $valor_tot_os[0]->valor_tot_os + $aux;    
-
+        $valor_tot_os = $valor_tot_os[0]->valor_tot_os + $aux;
         $objModel->UPDATE_VAL_TOT_OS($id_os, $valor_tot_os);
         $this->ListProdServ($id_os);
     }
