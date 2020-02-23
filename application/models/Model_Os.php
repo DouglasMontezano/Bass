@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Model_Os extends CI_Model
 {    
     public function CREATE($vet)    {
-        $this->db->trans_start();
+        // $this->db->trans_start();
         $this->db->insert('os', $vet);        
         return $this->db->insert_id(); 
         // $last_id = $this->db->insert_id(); 
         // return $this->$last_id;
-        $this->db->trans_complete();
+        // $this->db->trans_complete();
    }
 
     // CHAMADA PARA LISTAR__(_OS_)_INNER DE 3 TABELAS PUXANDO O CLIENTE E O FUNCIONARIO
@@ -94,6 +94,7 @@ class Model_Os extends CI_Model
         $this->db->where('id_os', $id);
         $this->db->select('valor_tot_os');
         return $this->db->get('os')->result();
+        
     }
     // funcão que vai atualizar a coluna  valor_tot_os na tabela OS.
     public function UPDATE_VAL_TOT_OS($id, $valor_tot_os)

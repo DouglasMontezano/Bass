@@ -3,7 +3,7 @@
       <div class="row">     
         <div class="col-md-12 ">
           <h3> Novo Item _ Ordem de Serviço N°: <?php echo $id_os;?> </h3>
-          <?php phpinfo();?>
+          <//?php phpinfo();?>
           <br>
         </div>
       </div>
