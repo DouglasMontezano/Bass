@@ -89,8 +89,7 @@
             <option> Concluido </option>
           </select>
         </div>
-      </div>
-      
+      </div>      
       <div class="col-md-2">
         <label for="tipo_lancamento">Tipo Lançamento:</label>
         <div class="radio">

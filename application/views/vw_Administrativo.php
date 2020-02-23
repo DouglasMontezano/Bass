@@ -81,7 +81,8 @@
                     <div id="chart_div"></div>
                 </div>
                 <div class="col-md-12">
-                    <div id="chart_div2"></div>
+                    <div id="chart_div2"></div>   
+                    <//?php phpinfo();?>                
                 </div>
             </div>
         </div>

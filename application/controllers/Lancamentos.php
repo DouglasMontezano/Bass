@@ -35,6 +35,8 @@ class Lancamentos extends CI_Controller
         $objModel = new model_Lancamentos();
         $retorno = $objModel->GETFORNECEDORES();
         $this->load->view('vw_Cad_Lancamentos', (array('fornecedores' => $retorno)));
+        
+        // Precisa buscar vendas e OS.
     }
 
     public function CadastraLancamento()
