@@ -1,10 +1,23 @@
 
 //Função de busca do valor de cada prod/serv para cadastro de itens da OS
-function busca_valor(id_prod_serv) {
+function busca_valor_os(id_prod_serv) {
     var base_url = "http://localhost/bass/";
     $.ajax({
         type: 'POST',
         url: base_url + "Os/"+"RetornaValorUnitario",
+        data:{"id_prod_serv": id_prod_serv},
+    })
+        .done(function(data) {
+            var obj = jQuery.parseJSON(data);
+            $('#valorunit').val(obj[0].valor_venda_prod_serv);
+        });
+}
+//Função de busca do valor de cada prod/serv para cadastro de itens da Venda
+function busca_valor_venda(id_prod_serv) {
+    var base_url = "http://localhost/bass/";
+    $.ajax({
+        type: 'POST',
+        url: base_url + "Vendas/"+"RetornaValorUnitario",
         data:{"id_prod_serv": id_prod_serv},
     })
         .done(function(data) {

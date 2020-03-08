@@ -1,58 +1,53 @@
 <div class="container fluid">
-<br><br>
-    <div class="row">
-        <div class= "col-md-12 ">
-            <h3> Novo Item _ Venda N°:  <?php echo $id_venda;?> </h3>
-            <br>
-        </div>
+  <br><br>
+  <div class="row">
+    <div class="col-md-12 ">
+      <h3> Novo Item _ Venda N°: <?php echo $id_venda;?> </h3>
+      <br>
     </div>
-
-    <form class="form control " action="<?= base_url()?>Vendas/CadastraItensVendas" method="post">
-        <div class="row">
-            <input type="hidden" name="id_venda" id="id_venda" value="<?php echo $id_venda;?>"> 
-
-            <div class="col-md-6 ">
-                <div class="form-group">
-                    <label for="prodserv">Produtos / Serviços:</label>
-                    <select class="form-control" id="prodserv" name="prodserv" onchange='busca_valor($(this).val())'>
-                        <option selected>selecione</option>
-                        <?php foreach ($prodserv as $obj){?>
-                            <option value="<?=$obj-> id_prod_serv ;?>"> <?=$obj-> nome_prod_serv ;?></option>
-                        <?php }?>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <label for="qtd">Quantidade:</label>
-                <input type="text" class="form-control soma" id="qtd" name="qtd"  placeholder="Quantidade" required>
-            </div>
-
-            <div class="col-md-2">
-                <label for="valorunit">Valor Unitário:</label>
-                <input type="text" class="form-control soma" id="valorunit" name="valorunit" value="" placeholder="Valor Unitário" required>
-            </div>
-
-            <div class="col-md-2">
-                <label for="desc">Desconto:</label>
-                <input type="text" class="form-control soma" id="desc" name="desc"  placeholder="Desconto Unitário" required>
-            </div>
+  </div>
+  <form class="form control " action="<?= base_url()?>Vendas/CadastraItensVendas" method="post">
+    <div class="row">
+      <input type="hidden" name="id_venda" id="id_venda" value="<?php echo $id_venda;?>">
+      <div class="col-md-6 ">
+        <div class="form-group">
+          <label for="prodserv">Produtos / Serviços:</label>
+          <select class="form-control" id="prodserv" name="prodserv" onchange='busca_valor_venda($(this).val())'>
+            <option selected>selecione</option>
+            <?php foreach ($prodserv as $obj){?>
+            <option value="<?=$obj-> id_prod_serv ;?>"> <?=$obj-> nome_prod_serv ;?></option>
+            <?php }?>
+          </select>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-md-3">
-                <label for="valortot">Valor Total:</label>
-                <div class="input-group">
-                    <span class="input-group-addon">R$</span>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="valortot" id="valortot" value="">
-                </div>
-            </div>
-                        
-            <div class="col-md-8">
-                <br>
-                <button type="submit" class="btn btn-success"   name="salvar">Adicionar</button>
-                <button type="reset" class=" btn btn-warning"   name="limpar"> Limpar</button>
-            </div>
+      </div>
+      <div class="col-md-2">
+        <label for="qtd">Quantidade:</label>
+        <input type="text" class="form-control soma" id="qtd" name="qtd" placeholder="Quantidade" required>
+      </div>
+      <div class="col-md-2">
+        <label for="valorunit">Valor Unitário:</label>
+        <input type="text" class="form-control soma" id="valorunit" name="valorunit" value=""
+          placeholder="Valor Unitário" required>
+      </div>
+      <div class="col-md-2">
+        <label for="desc">Desconto:</label>
+        <input type="text" class="form-control soma" id="desc" name="desc" placeholder="Desconto Unitário" required>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-md-3">
+        <label for="valortot">Valor Total:</label>
+        <div class="input-group">
+          <span class="input-group-addon">R$</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="valortot"
+            id="valortot" value="">
         </div>
-    </form>
+      </div>
+      <div class="col-md-8"><br>
+        <button type="submit" class="btn btn-success" name="salvar">Adicionar</button>
+        <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
+      </div>
+    </div>
+  </form>
 </div>
 </body>
