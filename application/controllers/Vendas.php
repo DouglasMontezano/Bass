@@ -187,8 +187,7 @@ class Vendas extends CI_Controller
         $objModel->UPDATE_VAL_TOT_VENDA($id_venda, $valor_tot_venda);
         $this->ListProdServ($id_venda);
     }
-    //vendas esta usando o mesmo ajax para carregar o FormCadastraItens....por isso o ajax busca originalmente pelo método no controller
-    // da O.S---> esta função abaixo não esta sendo usada, mas é igual a do controller OS... :)
+    //retorna valor unitário para o ajax    
     public function RetornaValorUnitario()
     {
         $this->Verifica_Sessao();
