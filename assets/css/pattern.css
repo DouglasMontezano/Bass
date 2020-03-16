@@ -1,6 +1,11 @@
 *, ::after, ::before {
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(66, 74, 83)!important;
+    color: rgb(225, 228, 231);
+}
+
 .nav {
     display: flex;
     height: 100px;
@@ -79,6 +84,14 @@
 /* display:inline-block; */
 margin: auto 200px auto auto; 
 }
+
+/* .content{
+background-color: rgb(122, 115, 110);
+
+} */
+
+
+/* ///////////////////////////////////// */
 
 @media (min-width: 1200px) {
     .container {

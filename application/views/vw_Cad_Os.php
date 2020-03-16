@@ -36,16 +36,18 @@
     <div class="row">
       <div class="col-md-2">
         <label for="data_cheg">Data Entrada:</label>
-        <input type="date" class="form-control" id="data_cheg" name="data_cheg" placeholder="Data de Entrada" required>
+        <input type="date"  value="<?php echo date("Y/m/d")?>" class="form-control" id="data_cheg" name="data_cheg" placeholder="Data de Entrada" required>
       </div>
       <div class="col-md-2">
         <label for="hora_cheg">Hora Entrada:</label>
         <input type="time" class="form-control" id="hora_cheg" name="hora_cheg" placeholder="Hora de Entrada" required>
       </div>
+
       <div class="col-md-2">
         <label for="data_prev">Data Prevista:</label>
         <input type="date" class="form-control" id="data_prev" name="data_prev" placeholder="Data prevista para entrega"
           required>
+
       </div>
       <div class="col-md-4">
         <label for="veiculo">Veículo:</label>

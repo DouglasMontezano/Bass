@@ -38,9 +38,11 @@
       <div class="col-md-3">
         <label for="valortot">Valor Total:</label>
         <div class="input-group">
-          <span class="input-group-addon">R$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="valortot"
-            id="valortot" value="">
+          <div class="input-group-prepend">
+            <span class="input-group-text">R$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="valortot"
+              id="valortot" value="">
+          </div>
         </div>
       </div>
       <div class="col-md-8"><br>

@@ -1,6 +1,6 @@
 <?php include "head_pattern.php" ?>
 <body>
-	<div id="contents">
+	<div id="contents" class="content">
 		<?php echo $contents ?>
 	</div>
 	<!-- <?php include "footer.php" ?> -->

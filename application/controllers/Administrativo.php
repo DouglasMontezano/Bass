@@ -14,4 +14,9 @@ class Administrativo extends CI_Controller
         $this->Verifica_Sessao();
         $this->template->load("layouts/lay_pattern.php", "vw_Administrativo");
     }
+
+      public function time(){
+        // date_default_timezone_set(‘America/Sao_Paulo’);
+        return date('d/m/Y H:i:s');
+    }
 }
