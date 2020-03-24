@@ -37,6 +37,8 @@
       <div class="col-md-2">
         <label for="data_cheg">Data Entrada:</label>
         <input type="date"  value="<?php echo date("Y/m/d")?>" class="form-control" id="data_cheg" name="data_cheg" placeholder="Data de Entrada" required>
+      <!-- echo date(DATE_RFC822); -->
+      
       </div>
       <div class="col-md-2">
         <label for="hora_cheg">Hora Entrada:</label>
