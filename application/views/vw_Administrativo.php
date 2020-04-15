@@ -1,6 +1,5 @@
 <body onload="chartdataload()">
-  <nav class="nav">
-    <!-- <div class="container container-fluid "> -->
+  <nav class="nav nav-wrapper">  
     <div class="title-nav">
       <h3>Administrativo</h3>
     </div>
@@ -72,24 +71,22 @@
           <p>Logout</p>
         </a>
       </li>
-    </ul>
-    <!-- </nav> -->
+    </ul>   
     </div>
     <br>
-    <!-- <div class="containner container-fluid">
+    <div class="containner container-fluid">
       <div class="row">
         <div class="col-md-12">
           <div class="col-md-12">
             <div id="chart_div"></div>
           </div>
           <div class="col-md-12">
-            <div id="chart_div2"></div>
-            </ /?php phpinfo();?>
+            <div id="chart_div2"></div>            
           </div>
         </div>
       </div>
     </div>
-    </div> -->
+    </div>
 </body>
 
 </html>
