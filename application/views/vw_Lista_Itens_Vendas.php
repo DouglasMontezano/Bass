@@ -1,8 +1,9 @@
-
-<div class="row">
+<!-- <div class="row"> -->
   <div class="col-md-12">
+   
+    <table class=" captiontop table table-striped table-dark table-bordered table-hover ">
     <caption> Listando Produtos e Serviços da Venda Nº: <?=$resultado[0]->id_venda;?> </caption>
-    <table class=" table table-striped table-dark table-bordered table-hover ">
+
       <thead>
         <tr> </tr>
         <tr>
@@ -56,20 +57,18 @@
         <a href="<?=base_url('Vendas/Lancar_Vendas/' . $obj->id_venda . '/' . $tot_venda . '/' . $resultado[0]->data_venda)?>"
           class="btn btn-success btn-group">Finalizar Venda
         </a>
-
         <?php elseif ($existvenda >= 1 and $resultado[0]->situacao_venda != 'Concluída'): ?>
-        <a href="<?=base_url('Lancamentos/EditLancamentos' . '/' . $cod_lancamento[0]->id_lancamento . '/' . $tot_venda)?>"
-          class="btn btn-success btn-group"> Finalizar Venda e Atualizar Lançamento
-        </a>
+          <a href="<?=base_url('Lancamentos/EditLancamentos' . '/' . $cod_lancamento[0]->id_lancamento . '/' . $tot_venda)?>"
+            class="btn btn-success btn-group"> Finalizar Venda e Atualizar Lançamento
+          </a>
         <?php endif;?>
       </div>
-      <div class="col-md-5">       
+      <div class="col-md-5">
         <h2 class="valortot">Valor Total:<?php echo ' R$ ' . number_format($tot_venda, 2, ',', '.'); ?></h2>
       </div>
     </div>
   </div>
 </div>
-</div>
+<!-- </div> -->
 </body>
-
 </html>

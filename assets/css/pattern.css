@@ -102,8 +102,19 @@ body {
     padding-bottom: initial;
 
 }
+/* Ajusta  o valor total em listagem de produtos e serviços de OS */
+.valortot{
+    text-align: right;
+    padding-right: 10px;
+}
 
-
+.captiontop caption {
+    caption-side: top;
+}
+caption {
+    display: table-caption;
+    text-align: -webkit-center;
+}
 @media (max-width:1501px) {
   
     .title-nav {

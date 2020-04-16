@@ -1,4 +1,4 @@
-<div class="container">
+<!--  <div class="container"> -->
   <br>
   <br>
   <div class="col-md-12">
@@ -30,7 +30,7 @@
           <td><?= $obj->status_lancamento;                              ?></td>
           <td><?= $obj->forma_pagamento_lancamento;                     ?></td>
           <td><?=  number_format($obj->valor_lancamento, 2, ',', '.');  ?></td>
-          <td>
+          <td align="center">
             <a href="<?= base_url('Lancamentos/EditLancamentos/' . $obj->id_lancamento) ?>"
               class="btn btn-info btn-group"><i class="fa fa-pencil" aria-hidden="true"></i> </a>
             <a href="<?= base_url('Lancamentos/ExcLancamentos/' . $obj->id_lancamento) ?>"
@@ -43,6 +43,6 @@
       </tbody>
     </table>
   </div>
-</div>
+<!-- </div> -->
 </body>
 </html>
