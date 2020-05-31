@@ -5,9 +5,9 @@ function chartdataload() {
         type: 'POST',
         url: base_url + "Charts/" + "Get_Rec_Desp",
         dataType: 'json',
-        success: function (data) {
-           console.log(data);
-
-        }
+       // data:{"valor_lancamento": valor_lancamento},         
+    })
+    .done(function(data) {
+        console.log(data);
     });
 }

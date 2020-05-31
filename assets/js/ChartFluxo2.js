@@ -35,7 +35,7 @@ function drawTrendlines() {
             }
         },
         vAxis: {
-            title: 'Rating (scale of 1-1e0)'
+            title: 'Rating (escale 1 a 10)'
         }
     };
 

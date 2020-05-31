@@ -13,13 +13,20 @@ class  Charts extends CI_Controller
 
     public function Get_Rec_Desp()
     {
-        $Rec    = $this->Model_Charts->GET_RECEITAS();
-        $Desp   = $this->Model_Charts->GET_DESPESAS();
-        $merge = array(
-            'valor_lancamento_rec' => $Rec['valor_lancamento'],
-            'valor_lancamento_desp' => $Desp['valor_lancamento']
+        $this->load->model('Model_Charts');
+        $objModel = new Model_Charts();
+       // $rec = json_encode($this->$objModel->GET_RECEITAS());
+        $rec = $this->$objModel->GET_RECEITAS();
+
+        //$desp   = $this->$objModel->GET_DESPESAS();
+        /*$merge = array(
+            'val_lanc_rec' => $Rec['valor_lancamento'],
+            'val_lanc_desp' => $Desp['valor_lancamento']
         );
-        echo json_encode($merge);
+        */
+        var_dump($rec);
+       // return $rec;
+       
     }
 
 

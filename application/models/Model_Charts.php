@@ -8,7 +8,9 @@ class Model_Charts extends CI_Model
         $this->db->select_sum('valor_lancamento');
         $this->db->Where('tipo_lancamento', 'Receita');
         $this->db->order_by('id_lancamento');
-        return $this->db->get('lancamentos')->result_array()[0];
+        //return $this->db->get('lancamentos')->result_array()[0];
+        return $this->db->get('lancamentos')->result();
+        
     }
     public function GET_DESPESAS()
     {
