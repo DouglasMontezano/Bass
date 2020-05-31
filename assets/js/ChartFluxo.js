@@ -1,13 +1,16 @@
 
+
 google.charts.load('current', {'packages': ['corechart']});
 google.charts.setOnLoadCallback(drawVisualization);
+
+
 
 function drawVisualization() {
 //criar uma função ajax para buscar dados no banco e carregar o charts.
 
     var data = google.visualization.arrayToDataTable([
         ['Month', 'Receitas', 'Despesas', 'Lucro Bruto'],
-        ['Janeiro', 45, 34, 522],
+        ['Janeiro', 225, 220, 522],
         ['Fevereiro', 1350, 1120, 599],
         ['Março', 1570, 1167, 587],
         ['Abril', 1390, 1110, 615],
