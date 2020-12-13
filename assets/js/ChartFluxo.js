@@ -20,7 +20,6 @@ google.charts.load('current', {'packages': ['corechart']});
 google.charts.setOnLoadCallback(drawVisualization);
 
 function drawVisualization() {
-
     var data = google.visualization.arrayToDataTable([
         ['Month', 'Receitas', 'Despesas', 'Lucro Bruto'],
         ['Janeiro', 225, 220, 522],
