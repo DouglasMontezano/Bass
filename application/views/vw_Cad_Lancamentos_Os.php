@@ -11,7 +11,7 @@
       <input type="hidden" name="situacao_os" id="situacao_os" value="<?php echo $situacao?>"></input>
       <div class="col-md-2">
         <label for="id_os">Codigo O.S:</label>
-        <input type="text" class="form-control" id="id_os" name="id_os" value="<?= $cod_os;?>"
+        <input disabled type="text" class="form-control" id="id_os" name="id_os" value="<?= $cod_os;?>"
           placeholder="Código da O.S"></input>
       </div>
       <div class="col-md-2">

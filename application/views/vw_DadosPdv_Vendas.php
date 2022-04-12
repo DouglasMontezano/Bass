@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <div class="container container-fluid">
     <br><br>
   <div class="row">
     <div class="col-md-12 ">
-      <h5>Venda</h5>
-    </div>   
-  </div>
+      <h3>Venda</h3>
+    </div> 
+   </div>
   <form class="form control" action="<?=base_url()?>vendas/SalvarEditvendas" method="post">
     <input type="hidden" name="id_venda" id="id_venda" value="<?=$vendas[0]->id_venda;?>"></input>
     <div class="row">
@@ -47,6 +47,7 @@
         <input disabled="true" type="text" class="form-control" id="funcionario" name="funcionario"
           placeholder="funcionario" value="<?=$vendas[0]->nome_funcionario;?>"></input>
         <br>
+      </div>
       </div>
   </form>
 </div>

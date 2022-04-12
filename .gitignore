@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 git ignore
 
 application/config/config.php
 application/config/database.php
 database.php
 application/config/database.php
+=======
+application/
+>>>>>>> linux

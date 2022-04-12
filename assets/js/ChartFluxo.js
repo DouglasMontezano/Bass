@@ -1,13 +1,28 @@
+//Função de busca de Receitas, Despesas e Lucro Bruto
+
+function datagrafic(id_prod_serv) {
+    var base_url = "http://localhost/bass/";
+    $.ajax({
+        type: 'POST',
+        url: base_url + "Charts/"+"Get_Rec_Desp",
+        //data:{"id_prod_serv": id_prod_serv},
+    })
+        .done(function() {
+            //var obj = jQuery.parseJSON(data);
+            var obj;
+            //$('#valorunit').val(obj[0].valor_venda_prod_serv);
+            console.log(obj[0].valor_lancamento);
+
+        });
+}
 
 google.charts.load('current', {'packages': ['corechart']});
 google.charts.setOnLoadCallback(drawVisualization);
 
 function drawVisualization() {
-//criar uma função ajax para buscar dados no banco e carregar o charts.
-
     var data = google.visualization.arrayToDataTable([
         ['Month', 'Receitas', 'Despesas', 'Lucro Bruto'],
-        ['Janeiro', 45, 34, 522],
+        ['Janeiro', 225, 220, 522],
         ['Fevereiro', 1350, 1120, 599],
         ['Março', 1570, 1167, 587],
         ['Abril', 1390, 1110, 615],

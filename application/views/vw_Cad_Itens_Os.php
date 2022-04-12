@@ -45,8 +45,8 @@
                   id="valortot" value="">
               </div>
             </div>
-            <div class="col-md-8">
-              <br>
+          <br>
+            <div class="">          
               <button type="submit" class="btn btn-success" name="salvar">Adicionar</button>
               <button type="reset" class=" btn btn-warning" name="limpar"> Limpar</button>
             </div>

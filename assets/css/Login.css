@@ -10,7 +10,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     height: auto;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a !important;
 }
 
 content {

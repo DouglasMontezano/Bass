@@ -12,7 +12,7 @@
     <li>
       <a href="<?=base_url()?>Vendas/FormCadVendas">
         <i class="fa fa-3x fa-fw text-inverse -plus -times t-plus fa-plus-circle"></i>
-        <p>Cadastrar</p>
+        <p>Nova Venda</p>
       </a>
     </li>
     <li>

@@ -19,8 +19,7 @@ class Vendas extends CI_Controller
     //Função que lista as Vendas
     public function ListVendas()
     {
-        $this->Verifica_Sessao();
-        // $this->load->view('vw_Vendas');
+        $this->Verifica_Sessao();        
         $this->template->load("layouts/lay_pattern", "vw_Vendas");
         $this->load->model('model_Vendas');
         $objModel = new model_Vendas();

@@ -144,28 +144,3 @@ class Fornecedores extends CI_Controller {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

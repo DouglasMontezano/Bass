@@ -112,6 +112,7 @@ class Clientes extends CI_Controller
     $busca = $this->input->post('busca');
     $this->template->load("layouts/lay_pattern", "vw_Clientes");
     $this->load->model('model_Clientes');
+    
     $objModel = new Model_Clientes();
     $retorno = $objModel->GetForCli($busca);
     $this->load->view('vw_Lista_Clientes', array('resultado' => $retorno));

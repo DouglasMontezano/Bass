@@ -1,4 +1,4 @@
-<div class="container container-fluid">
+<!-- <div class="container container-fluid"> -->
   <div class="col-md-12">
     <br>
     <caption> Listando Ordens de serviço</caption>
@@ -25,7 +25,7 @@
           <td><?=$obj->nome_cliente;?></td>
           <td><?=$obj->nome_funcionario;?></td>
           <td><?=$obj->situacao;?></td>
-          <td align=right>
+          <td align=center>
             <a href="<?=base_url('Os/ListProdServ/' . $obj->id_os)?>" class="btn btn-success btn-group"><i
                 class="fa fa-eye" aria-hidden="true"></i></a>
             <a href="<?=base_url('Os/FormEditOs/' . $obj->id_os)?>" class="btn btn-info btn-group"><i
@@ -38,7 +38,7 @@
         <?php }?>
       </tbody>
     </table>
-  </div>
+  <!-- </div> -->
 </div>
 </body>
 </html>
