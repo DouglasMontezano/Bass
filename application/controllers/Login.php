@@ -41,7 +41,7 @@ class Login extends CI_Controller
 			$user['logado'] = true;
 			// setando a sessão com os dados do vetor
 			$this->session->set_userdata($user);
-			//liberando o acesso ao painel administrativo
+			//liberando o acesso ao painel administrativo			
 			redirect('adm');
 		}
 		// SE NÃO encontrar um usuario e senha corretos no banco redireciona para o formulário de login
