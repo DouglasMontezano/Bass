@@ -1,7 +1,0 @@
-{
-    "html.format.indentInnerHtml": true,
-    "html.format.indentHandlebars": true,
-    "editor.fontSize": 15,
-    "editor.tabCompletion": "on",
-    "editor.tabSize": 2
-}

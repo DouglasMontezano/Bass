@@ -29,6 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $config['base_url'] = $base_url;
 
 $config['base_url'] ='http://localhost/bass';
+// $config['base_url'] ='http://bassautocenter.ddns.net';
 /*
 
 |--------------------------------------------------------------------------
